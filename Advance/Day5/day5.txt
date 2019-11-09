@@ -1,0 +1,15 @@
+1. What is the difference between response.sendRedirect() and RequestDispather's forward?
+2. Which type of request is generated when sendRedirect() method is used?
+3. Which type of request is generated when RequestDispatcher's forward is used?
+4. What is the difference between forward() and include() method of RequestDispatcher?
+5. What is http session?
+6. What is session tracking?
+7. How many ways are there of session tracking in java?
+8. What is cookie?
+9. How long cookie remains alive if the max age is not given?
+10. How to set cookie time for which you want to store it on client?
+11. What is HttpSession?
+12. How to get Session object in Servlet?
+13. What is the difference getSession(true) and getSession(false) method?
+14. What is request parameter and request attribute?
+15. How to destroy the session in servlet?

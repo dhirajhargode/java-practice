@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Marriage Apps</title>
+<script language="JavaScript" src="validation.js"></script>
+
+
+</head>
+<body>
+	<form action="marriageurl" method="POST" name="frm"	onsubmit="return validation(this)">
+		<h1 align="center">Marriage Eligibility</h1>
+		<table align="center">
+			<tr>
+				<td>PERSON NAME ::</td>
+				<td><input type="text" name="pname"
+					placeholder="Enter name here"></td>
+			</tr>
+			<tr>
+				<td>PERSON AGE &nbsp;&nbsp; ::</td>
+				<td><input type="password" name="page"
+					placeholder="Enter age here"></td>
+			</tr>
+			<tr>
+				<td>GENDER ::</td>
+				<td><input type="radio" name="gen" value="M" checked>Male<br>
+					<input type="radio" name="gen" value="F">Female</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					value="Check marriage eligibilty"></td>
+			</tr>
+		</table>
+		<!-- hidden box -->
+		<input type="hidden" value="no" name=vflag>
+		
+	</form>
+</body>
+</html>

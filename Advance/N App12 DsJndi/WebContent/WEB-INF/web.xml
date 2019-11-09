@@ -1,0 +1,17 @@
+<web-app >
+  <display-name>N App12 DsJndi</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>sla</servlet-name>
+  	<servlet-class>com.nt.servlet.PoolConnServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>sla</servlet-name>
+  	<url-pattern>/poolurl</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+body {
+  font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040;
+  
+}
+.register-title {
+  width: 460px;
+  line-height: 20px;
+  margin: 50px auto 20px;
+  font-size: 20px;
+  font-weight: 1000;
+  color: black;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.register {
+  margin: 0 auto;
+  width: 360px;
+  padding: 50px;
+  border-radius: 3px;
+}
+
+input[type=text],input[type=email],select{
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #e6eeff;
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:active {
+    background: #eee;
+    border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  }
+
+  &:focus { outline: 0; }
+}
+</style>
+
+</head>
+<body bgcolor="#aaee99" >
+  <h1 class="register-title">Forget Password</h1>
+  
+  <form class="register" action="forgetpsw" method="post">
+	
+	<b>Username : </b>
+    <input type="email" placeholder="Username" name ="uname" required><br>
+	
+	<b>Security Question : </b>
+    <select name="que">
+			<option value="">Select Security Question</option>
+			<option value="What is Nick Name?">What is Nick Name?</option>
+			<option value="What is your pet name?">What is your pet name?</option>
+			<option value="What is your favorite color?">What is your favorite color?</option>
+	</select><br>
+	
+	<b>Security Answer : </b>
+    <input type="text" placeholder="Enter Your Answer" name="ans" required>
+	
+    <input type="submit" value="Submit" class="register-button">
+
+	<p align="center">
+ `<h2>   <a href="signup.html"> Create Account</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="login.html"> Log In</a></h2></p>
+  </form>
+
+ 
+</body>
+</html>
+
+
+
+</body>
+</html>

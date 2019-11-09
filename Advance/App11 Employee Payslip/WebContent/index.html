@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+label {color:red}
+input{color:blue}
+select{color:green}
+</style>
+</head>
+<body>
+<fieldset  align="center">
+	
+	<legend align="top"><h1 >Employee Data Entry Form</h1></legend>
+	<form action="test">
+		<br> <br>
+		<p align="center">
+			<label> EmployID :: </label><input type="text" name="eid"> <br><br> 
+			<label> Employee Name ::</label> <input type="text" name="ename"> <br><br>
+			 <label> Job :: </label> <select name="job">
+				<option value="HR">HR</option>
+				<option value="PM">PM</option>
+				<option value="PL">PL</option>
+				<option value="APM">APM</option>
+				<option value="TL">TL</option>
+				<option value="SSE">SSE</option>
+				<option value="ASE">ASE</option>
+			</select> <br> <br>
+			<label> Allowance & Deduction :: </label>
+			<input type="checkbox" name="cb" value="hra">HRA
+			<input type="checkbox" name="cb" value="ta">TA
+			<input type="checkbox" name="cb" value="da">DA
+			<input type="checkbox" name="cb" value="tf">TF
+			<input type="checkbox" name="cb" value="pf">PF
+			<br><br>
+			 <label> Salary :: </label>
+			 <input type="text" name="salary">
+			 <br><br>
+			  <input type="submit" value="submit" name=>
+		</p>
+	</form>
+	</fieldset>
+</body>
+</html>

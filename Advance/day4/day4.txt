@@ -1,0 +1,15 @@
+1. What is container?
+2. What is web.xml file?
+3. How to create Servlet?
+4. How to create request type specific servlet?
+5. How to get request parameter (data) in servlet?
+6. Explain HttpServletRequest and HttpServletResponse object.
+7. Say use of method response.setContentType("").
+8. How to generate text response using servlet.
+9. How to move from one servlet to other servlet.
+10. What is the relation between action attribute of form html tag and url of the servlet?
+11. What is 404 response error code?
+12. What is 405 response error code?
+13. Which exception is written in service() methods throws clause?
+14. Which of the servlet life cycle method is called as separate thread?
+15. How to get multiple parameter values attached to only one request parameter?

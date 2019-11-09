@@ -1,0 +1,11 @@
+1. Name the standard jsp actions in jsp.
+2. What is the use of useBean?
+3. Explain the attributes of useBean.
+4. Explain the working flow of the useBean.
+5. What is the use of setProperty.
+6. Explain the attributes of setProperty.
+7. What is the use of getProperty.
+8. Explain the attributes of getProperty.
+9. What is MVC?
+10. What is dto?
+11. What is DAO?

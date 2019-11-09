@@ -1,0 +1,10 @@
+1. Explain SessionFactory hibernate object.
+2. What is Session in hibernate?
+3. Explain the use of Transaction object in hibernate.
+4. How to save, delete, update the record in hibernate?
+5. get() method of the Session is used for which purpose?
+6. What is the difference between get() and load().
+7. What is HQL?
+8. How to use HQL in hibernate?
+9. Tell syntax of DQL query in HQL.
+10. What are the values for autoDdlHbm2 SessionFactory properties? Explain them?

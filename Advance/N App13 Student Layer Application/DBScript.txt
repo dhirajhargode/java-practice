@@ -1,0 +1,2 @@
+create table Student_Result (S_No number(5) primary key, S_Name varchar2(15), Total_marks number(5), Avg_Marks number(5,2), Result varchar2(10));
+insert into Student_Result values(?,?,?,?,?)

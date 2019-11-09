@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<bean class="beans.MyCollection" id="mc">
+		<property name="no" value="10"/>
+		
+		<property name="name" value="Dhiraj"/>
+		
+		<property name="list">
+			<list>
+				<value>Driver_Class</value>
+				<value>URL</value>
+				<value>Name</value>
+				<value>Password</value>
+				<value>Password</value>
+			</list>
+		</property>
+		
+		<property name="map">
+			<map>
+				<entry key="driver" value="com.mysql.jdbc.Driver"/>
+				<entry key="url" value="jdbc:mysql://localhost:3306//db"/>
+				<entry key="name" value="root"/>
+				<entry key="password" value="cdac"/>
+				<entry key="password" value="cdac"/>
+			</map>
+		</property>
+		
+		<property name="prop">
+			<props>
+				<prop key="firstname">Dhiraj</prop>
+				<prop key="lastname">Hargode</prop>
+			</props>
+		</property>
+	</bean>
+
+
+</beans>

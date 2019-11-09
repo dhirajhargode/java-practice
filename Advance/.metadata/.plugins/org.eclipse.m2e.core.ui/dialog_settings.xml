@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="DhirajHargode"/>
+			<item value="com.q1"/>
+			<item value="com.cdac.orm"/>
+			<item value="com.cdac.spring.jdbctemplate"/>
+			<item value="com.cdac.autowire"/>
+			<item value="com.cdac.spring.scope"/>
+			<item value="com.cdac.cnamespace"/>
+			<item value="com.cdac.basicspring"/>
+			<item value="com.cdac.constructor"/>
+			<item value="com.cdac.payment.constructor"/>
+			<item value="com.cdac.courier"/>
+		</list>
+		<list key="name">
+			<item value="Spring-App06-Constructor-Injection"/>
+			<item value="Loosely_Coupling"/>
+		</list>
+		<list key="artifactId">
+			<item value="cdacapi"/>
+			<item value="q1.app"/>
+			<item value="Spring-ORM01"/>
+			<item value="Spring-JDBC01-JDBCTemplate"/>
+			<item value="Spring-App11-Autowire"/>
+			<item value="Spring-App10-Scope"/>
+			<item value="Spring-App09-C-Namespace"/>
+			<item value="Spring-App08-Basic-Spring"/>
+			<item value="Spring-App07-Constructor-Collection"/>
+			<item value="Spring-App06-Constructor-Injection"/>
+			<item value="Loosely_Coupling"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="443" key="x"/>
+		<item value="10" key="y"/>
+		<item value="531" key="height"/>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="http://repo1.maven.org/maven2/" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.cdac.webapp1"/>
+			<item value="com.jsp.proj1"/>
+			<item value="com.cdac.mvc.bookwebapp"/>
+			<item value="com.cdac.springmvc.webapp1"/>
+			<item value="com.cdac.mvc.webapp2"/>
+			<item value="com.cdac.mvc"/>
+		</list>
+		<list key="name">
+			<item value="Spring-MVC01"/>
+		</list>
+		<list key="artifactId">
+			<item value="WebApp-login"/>
+			<item value="JSP-Prog01"/>
+			<item value="Spring-WebMvc-03-BookApp"/>
+			<item value="Spring-WebMvc-02"/>
+			<item value="Spring-WebMvc-01"/>
+			<item value="Spring-MVC01"/>
+			<item value="SpringMVC01"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Table-Per-Concreate"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App10-Scope"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App09-C-Namespace"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App08-P-Namespace"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App07-Constructor-Collection"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App06-Constructor-Injection"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App05-Loosely-Coupling"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App04-Injecting-One-Bean-To-Another"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App04-Injecting-One-Bean-To-Another\src\main\java"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App03-SetterInjection"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App02"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Spring-App1"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Association-Many-To-One\src\main\java"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Association-One-to-One"/>
+			<item value="D:\CDAC\Dhiraj\ADV JAVA\Table-Per-Subclass"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

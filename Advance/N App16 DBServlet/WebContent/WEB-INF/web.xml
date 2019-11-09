@@ -1,0 +1,51 @@
+<web-app>
+
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>driver</param-name>
+		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>uname</param-name>
+		<param-value>scott</param-value>
+	</context-param>
+	<context-param>
+		<param-name>psw</param-name>
+		<param-value>tiger</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>DBServlet</servlet-name>
+		<servlet-class>com.nit.servlet.DBServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DBServlet</servlet-name>
+		<url-pattern>/db</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ErrorServlet</servlet-name>
+		<servlet-class>com.nit.servlet.ErrorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorServlet</servlet-name>
+		<url-pattern>/erurl</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HederServlet</servlet-name>
+		<servlet-class>com.nit.servlet.HederServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HederServlet</servlet-name>
+		<url-pattern>/headurl</url-pattern>
+	</servlet-mapping>
+
+</web-app>

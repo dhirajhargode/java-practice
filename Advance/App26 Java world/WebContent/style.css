@@ -1,0 +1,71 @@
+body {
+  font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040;
+  
+}
+
+.register-title {
+  width: 500px;
+  line-height: 50px;
+  margin: 50px auto 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+
+  text-align: center;
+  background: #c21ea4;
+  border-radius: 3px;
+}
+
+.register {
+  margin: 0 auto;
+  width: 360px;
+  padding: 70px;
+  background: #f4f4f4;
+  border-radius: 3px;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.register-input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 2px;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+
+  &:focus {
+    border-color: #1e9ce6;
+    outline: 0;
+  }
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:active {
+    background: #eee;
+    border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  }
+
+  &:focus { outline: 0; }
+}

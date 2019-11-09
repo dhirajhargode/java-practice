@@ -1,0 +1,5 @@
+1. Explain Spring MVC Architecture.
+2. What is DispatcherServlet?
+3. Explain HibernateTemplate?
+4. For what purpose HibernateCallback interface is used?
+

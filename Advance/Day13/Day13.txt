@@ -1,0 +1,9 @@
+1. How to use constructor DI in spring?
+2. What is p-namespace in spring?
+3. Explain the spring bean scopes?
+4. What is autowire in spring?
+5. How many types of autowiring are provided in spring?
+6. What is context-component-scan in spring cfg?
+7. Which annotations are used to make a class spring bean class?
+8. What is the use of @Autowire?
+9. What is the use of JdbcTemplate class?

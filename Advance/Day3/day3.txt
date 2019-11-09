@@ -1,0 +1,15 @@
+1. What is web application?
+2. How to identify server and client machine?
+3. What is HTTP protocol?
+4. What is Http Request and Http Response?
+5. How many types of HTTP Request can be generated?
+6. What is the difference between GET and POST type of request.
+7. How to generate GET request and POST request?
+8. What is Servlet?
+9. Explain Life Cycle of Servlet?
+10. Differenciate between execute() method, executeUpdate() method and executeQuery() method.
+11. What are the differences between Statement, PreparedStatement and CallableStatement?
+12. What is Transaction?
+13. How to manage transaction in jdbc?
+14. What is ResultSet?
+15. Explain moveable method and getter method of the ResultSet.

@@ -1,0 +1,13 @@
+1. How many types of association mapping given in hibernate? Name them.
+2. How to achieve one to one mapping in hibernate?
+3. How to achieve many to one mapping in hibernate?
+4. What is associates property?
+6. Which four fetching strategies given in hibernate. What are the difference between them?
+7. How to implement one to many association in hibernate?
+8. How to implement many to many association in hibernate?
+9. Explain the following annotation in hibernate
+	@ManyToMany(mappedby="")
+	@JoinColumn
+	@JoinTable
+	
+

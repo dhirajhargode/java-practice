@@ -1,0 +1,13 @@
+1. What are the available scopes in the servlet?
+2. Explain ServletContext object?
+3. What is init parameter in Serlvet. How to access them in serlvet?
+4. What is context parameter and how to access them?
+5. What is Java Bean?
+6. What is JSP?
+7. Explain JSP life cycle?
+8. Name the JSP components/elements.
+9. What are scripting elements and their syntax? When to use them?
+10. How many jsp implicit objects are there? Tell their types.
+11. How many jsp directives defined in jsp? Tell the syntax.
+12. What is the difference between Servlet and JSP?
+13. What is MVC?

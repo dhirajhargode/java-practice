@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.cdac.app01.dto">
+	<class name="Employee" table="Emp">
+		<id name="empId" column="emp_id"/>
+		<property name="empName" column="emp_name"/>
+		<property name="basicSalary" column="basic_salary"/>
+		<property name="date" type="date" column="hire_date"/>
+	</class>
+
+</hibernate-mapping>

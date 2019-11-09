@@ -1,0 +1,49 @@
+JSP : Java Server Pages
+--> This is servler side java component.
+--> It separates the view code and java code.
+--> It is text document has 2 parats		
+		1. for view code (text document) 
+		2. for java code (jsp components/elements) 
+--> JSP Components/elements
+	1. Scripting Elements
+	2. Directives
+	3. Implicit Objects
+	4. Standard Actions
+
+--> Scripting elements
+	1. declaration	: to define any method or to declare any class data memeber
+	syntax : <%!     %>
+	2. scriptlet : to write request processing code. It is similar to service() method of the Servlet.
+	syntax : <%   %>
+	3. expression : to write text response. It is similar to println() method of the PrintWriter in the Servlet.
+	Syntax : <%=         %>
+
+Implicit Objects 
+	1. out: JspWriter
+	2. request: HttpServletRequest
+	3. response: HttpServletResponse
+	4. session: HttpSession
+	5. application: ServletContext
+	6. config: ServletConfig
+	7. page: represents current jsp page (like 'this' in java)
+ 	8. pageContext: PageContext
+	9. exception: Throwable (availabe if jsp is an error page)
+
+
+Directivs
+	syntax :
+	<%@ directive-name attribute="value" %>
+	
+	1. page
+	2. include
+	3. taglib
+	
+	Eg.
+	<%@ page import="java.util.Date" %>
+	
+
+
+
+
+
+	
