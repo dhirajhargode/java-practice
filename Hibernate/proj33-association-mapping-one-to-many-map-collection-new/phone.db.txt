@@ -1,0 +1,1 @@
+create table sarang_phoneno_map(phno number primary key,type varchar2(20),unid number,map_index varchar2(20), foreign key(unid) references sarang_user_map(userid));

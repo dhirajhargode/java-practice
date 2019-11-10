@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="dt" class="java.util.Date"/>
+	<bean id="wsg" class="com.nit.beans.WishGenerator">
+		<property name="name" value="Raja"/>
+		<property name="date" ref=""/>
+	</bean>
+</beans>

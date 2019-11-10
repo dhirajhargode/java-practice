@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/NIT/Webservices/XSD/po.xsd">
+	<orderItems>
+		<item>
+			<ItemCode>IC001</ItemCode>
+			<quantity>10</quantity>
+		</item>
+	</orderItems>
+	<shipping-address>
+		<addrLine1>Hyd</addrLine1>
+		<city>hyd</city>
+		<state>TG</state>
+		<zip>50081</zip>
+		<country>India</country>
+	</shipping-address>
+</purchaseOrder>

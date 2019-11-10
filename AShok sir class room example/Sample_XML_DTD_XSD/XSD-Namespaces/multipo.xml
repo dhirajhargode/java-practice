@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<es:orderItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ebay.in/sales/types file:///C:/Workshop/Trainings/WebServices/po2.xsd" xmlns:es="http://ebay.in/sales/types" xmlns:at="http://amazon.org/sales/marketing">
+	
+	<at:item>
+		<itemCode>IC1001</itemCode>
+		<quantity>23</quantity>
+	</at:item>
+	
+</es:orderItems>

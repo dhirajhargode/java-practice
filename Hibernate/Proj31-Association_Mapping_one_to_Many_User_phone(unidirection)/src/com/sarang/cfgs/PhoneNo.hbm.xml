@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.PhoneNo" table="phone">
+		<id name="phId" type="string" length="10"></id>
+		<property name="type" type="string" length="10"></property>
+	</class>
+</hibernate-mapping>

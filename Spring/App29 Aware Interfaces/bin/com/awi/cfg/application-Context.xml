@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="om" class="com.awi.beans.OrderManage">
+		<property name="bluedart" ref="bluedart"/>
+		<property name="dtdc" ref="dtdc"/>
+	</bean>
+	<bean id="bluedart" class="com.awi.beans.BlueDartImpl"/>
+	<bean id="dtdc" class="com.awi.beans.DTDCImpl"/>
+	
+	
+	
+	
+
+
+</beans>

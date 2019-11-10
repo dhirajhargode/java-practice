@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.User" table="sarang_user_list">
+		<id name="userid" column="userid"></id>
+		<property name="name" column="name"></property>
+		<list name="phones" cascade="all-delete-orphan" lazy="extra">
+			<key column="unid"></key>
+			<list-index column="list_index"></list-index>
+			<one-to-many class="com.sarang.domain.Phone"></one-to-many>
+		</list>
+	</class>
+</hibernate-mapping>

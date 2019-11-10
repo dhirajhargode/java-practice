@@ -1,0 +1,39 @@
+package com.jdbc.service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.bo.model.Employee;
+import com.jdbc.dao.DBOperationDAO;
+
+public class DBOperationService {
+
+	private DBOperationDAO dao;
+
+	public void setDao(DBOperationDAO dao) {
+		this.dao = dao;
+	}
+
+	public Employee showSalary(int no) {
+		Employee emp = dao.getSalary(no);
+		return emp;
+	}
+
+	public Map<String, Object> getEmpDetail(int no) throws Exception {
+		Map<String, Object> map = dao.listEmpDetail(no);
+		if (map != null)
+			return map;
+		else
+			throw new Exception(no + " Employee Not Found");
+	}
+
+	public List<Map<String, Object>> getAllEmpDetail() throws Exception {
+		List<Map<String, Object>> list = dao.listAllEmpDetail();
+		if (list != null) {
+			return list;
+		} else {
+			throw new Exception("Employee Not Found");
+		}
+	}
+
+}

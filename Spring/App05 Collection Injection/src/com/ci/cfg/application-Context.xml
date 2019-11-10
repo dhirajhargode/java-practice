@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="com.ci.beans.Person">
+		<property name="personId" value="101"/>
+		<property name="personName" value="RAJA"/>
+		<property name="visitedPlaces">
+			<list>
+				<value>hyd</value>
+				<value>hyd</value>
+				<value>banglore</value>
+			</list>
+		</property>
+		<property name="courses">
+			<set>
+				<value>JAVA</value>
+				<value>JAVA</value>
+				<value>ORACLE</value>
+			</set>
+		</property>
+		<property name="parents">
+			<map>
+				<entry key="Father" value="RAM"/>
+				<entry key="Mother" value="SITA"/>
+			</map>
+		</property>
+		<property name="email">
+			<props>
+				<prop key="Office Mail">dhiraj@java.com</prop>
+				<prop key="Personal Mail">dhiraj@gmail.com</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

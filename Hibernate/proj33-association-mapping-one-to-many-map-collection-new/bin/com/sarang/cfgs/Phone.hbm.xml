@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Phone" table="sarang_phoneno_map">
+		<id name="phno" column="phno"></id>
+		<property name="type" column="type"></property>
+	</class>
+</hibernate-mapping>

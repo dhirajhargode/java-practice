@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vs:stockMarket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://vishkasteel.in/product/retail file:///C:/Workshop/Trainings/WebServices/stock.xsd" xmlns:vs="http://vishkasteel.in/product/retail">
+	<vs:buyStock>
+		<vs:stock>
+			<vs:stockQuote>CIPLA</vs:stockQuote>
+			<vs:units>10</vs:units>
+			<vs:price>100</vs:price>
+		</vs:stock>
+		<vs:transactionInfo>
+			<vs:marketType>BSE</vs:marketType>
+			<vs:orderDate>2013-10-03</vs:orderDate>
+			<vs:place>US</vs:place>
+		</vs:transactionInfo>
+	</vs:buyStock>
+</vs:stockMarket>

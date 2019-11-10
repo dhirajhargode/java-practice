@@ -1,0 +1,67 @@
+package com.njt.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.njt.mapper.EmployeeMapper;
+import com.njt.model.Employee;
+
+public class EmployeeDao {
+	private static final String insert_emp = "insert into Employee(EmpNo, Name, Job, Salary) values(:id, :name, :job, :sal)";
+	private static final String Find_By_ID = "SELECT * FROM Employee WHERE EmpNo=:id";
+	private static final String Find_By_Name = "SELECT * FROM Employee WHERE name=:name";
+	private static final String Find_All_Employee = "SELECT * FROM Employee";
+	private NamedParameterJdbcTemplate njt;
+
+	public void insertEmploy(int no, String name, String job, Double sal) {
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("id", no);
+		param.put("name", name);
+		param.put("job", job);
+		param.put("sal", sal);
+		njt.update(insert_emp, param);
+	}
+	
+	public Employee findByID(int no) {
+		Map<String,Object> paramMap=new HashMap<String,Object>();
+		paramMap.put("id", no);
+		return njt.queryForObject(Find_By_ID, paramMap, new EmployeeMapper());
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public NamedParameterJdbcTemplate getNjt() {
+		return njt;
+	}
+
+	public void setNjt(NamedParameterJdbcTemplate njt) {
+		this.njt = njt;
+	}
+
+}

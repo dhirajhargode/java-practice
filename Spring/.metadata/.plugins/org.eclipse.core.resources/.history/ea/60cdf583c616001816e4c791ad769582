@@ -1,0 +1,5 @@
+package com.dc.beans;
+
+public class BookMapper {
+
+}

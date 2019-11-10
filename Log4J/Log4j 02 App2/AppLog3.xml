@@ -1,0 +1,44 @@
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797526630" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.static.Application Started]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797527040" level="WARN" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.main().jdbc driver register]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528309" level="INFO" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.main().jdbc connection established]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528440" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.main().jdbc.Statement created]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528602" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.main().ResultSet object created]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528620" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.main().ResultSet Object processed]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528620" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Log4jApp1.mod1.SelectTest.main().ResultSet Object processed]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528621" level="DEBUG" thread="main">
+<log4j:message><![CDATA[log4jApp1.mod1.SelectTest.main().finally block]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528621" level="DEBUG" thread="main">
+<log4j:message><![CDATA[log4jApp1.mod1.SelectTest.main().finally ResultSet object close]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528621" level="DEBUG" thread="main">
+<log4j:message><![CDATA[log4jApp1.mod1.SelectTest.main().finally Statement close]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.jdbc.SelectTest" timestamp="1520797528657" level="DEBUG" thread="main">
+<log4j:message><![CDATA[log4jApp1.mod1.SelectTest.main().finally Connection close]]></log4j:message>
+</log4j:event>
+

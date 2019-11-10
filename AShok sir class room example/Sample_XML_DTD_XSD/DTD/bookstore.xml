@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstore SYSTEM "C:\NIT\Webservices\bookstore.dtd">
+<bookstore>
+	<book>
+		<name>Webservices</name>		
+		<id>101</id>
+		<price>100$</price>
+	</book>
+	<author>
+		<author-name>Hafeez</author-name>
+	</author>
+</bookstore>

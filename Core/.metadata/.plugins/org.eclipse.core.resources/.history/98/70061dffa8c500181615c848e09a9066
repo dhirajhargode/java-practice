@@ -1,0 +1,46 @@
+package com.lf.arrays;
+
+public class Arrays {
+	
+	public static void main(String[] args) {
+		
+		int[] a=new int[3];
+		
+		System.out.println("length is ::"+a.length);
+		System.out.println(a);
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+	//	System.out.println(a[3]); // ArrayIndexOutOfBound exception
+		
+				
+		int[] a2=new int[0];
+		System.out.println("length is ::"+a2.length);
+	//	System.out.println("::"+a2[0]);
+		
+		int[] a3=new int[2];
+		a3[0]=10;
+		a3[1]=20;
+		
+		
+		
+		int[] a4= {10,20,30};
+		
+		System.out.println("a4 class name "+a4.getClass().getName());
+		int[] a5;
+	//	a5= {2,4,6}; illegal Start of expression
+		
+		int[][][] a6= {{{10,20,30},{40,50}},{{60},{70,80},{90}}};
+		System.out.println("length : "+a6[1].length);
+		
+		
+		int[] anno=new int[] {10,20,30};
+		System.out.println("Annonimous array length is "+anno.length);
+		System.out.println("Annonimous array is "+anno[0]);
+				
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+package com.dc.beans;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCallback;
+
+public class AppDao {
+
+	private JdbcTemplate jdbctemplete;
+
+	private static final String Insert_Quert ="INSERT INTO BOOK_STORE(BOOK_ID,AUTHOR_NAME,BOOK_NAME,PRICE,ISBN) VALUES(?,?,?,?,?)";
+	public void insertBook(int bid, String aname, String bname, Double price, String isbn) {
+
+		
+
+		int no= jdbctemplete.update(Insert_Quert, bid, aname, bname, price, isbn);
+		if(no>0)
+			System.out.println("sucessfully inserted....");
+		else
+			System.out.println("failed....");
+
+	}
+	
+	public void insertBookWithPstmt() {
+		PreparedStatementCallback<boolean> pstmtcallback=new PreparedStatementCallback<boolean>() {
+			
+		};
+	} 
+
+	
+	
+	
+	
+	public void setJdbctemplete(JdbcTemplate jdbctemplete) {
+		this.jdbctemplete = jdbctemplete;
+	}
+
+}

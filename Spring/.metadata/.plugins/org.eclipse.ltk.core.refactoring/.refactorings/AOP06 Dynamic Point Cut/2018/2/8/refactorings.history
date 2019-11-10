@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.pc.beans.WSStaticPointCut.java&apos; to &apos;WSSDynamicPointCut.java&apos;&#x0D;&#x0A;- Original project: &apos;AOP06 Dynamic Point Cut&apos;&#x0D;&#x0A;- Original element: &apos;com.pc.beans.WSStaticPointCut.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.pc.beans.WSSDynamicPointCut.java&apos;" description="Rename compilation unit &apos;WSStaticPointCut.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.pc.beans{WSStaticPointCut.java" name="WSSDynamicPointCut.java" references="false" stamp="1518946905665" version="1.0"/>
+</session>

@@ -1,0 +1,1 @@
+ create table sarang_phoneno_list(phno number primary key,unid number,type varchar2(20), list_index number,foreign key(unid) references sarang_user_list(userid));

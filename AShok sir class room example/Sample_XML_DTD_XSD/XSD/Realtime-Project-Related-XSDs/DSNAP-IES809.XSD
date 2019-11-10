@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:include schemaLocation="Correspondence_Base_Schema.xsd" />
+	
+	<xs:element name="RICorrespondence">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Metadata" type="Metadata" />
+				<xs:element name="CorrespondenceRequest" type="CorrespondenceRequest" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="CorrespondenceRequest">
+		<xs:sequence>
+			<xs:element name="TemplateMetadata" type="TemplateMetadataType" />
+			<xs:element name="HeaderFooterInfo" type="HeaderFooterInfoType" />
+			<xs:element name="RecipientInfo" type="RecipientInfoType" />
+			<xs:element name="DSNAPBenifitExtension">
+			<xs:complexType>
+					<xs:sequence>
+					<xs:element name="PrimaryApplicantName" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPBenifitStartPeriod" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPBenifitEndPeriod" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPHouseholdSize" type="xs:string" minOccurs="0" />					
+					<xs:element name="DSNAPBenfitAmount" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPHouseholdIncome" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPHouseholdResources" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPHouseholdDiasterPeriodIncome" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPHouseholdDiasterExpenses" type="xs:string" minOccurs="0" />					
+					<xs:element name="DSNAPHouseholdincomeThreshold" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPIncomeThresholdforHouseholdSize" type="xs:string" minOccurs="0" />
+					<xs:element name="HouseholdSize" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPMaximumBenefitAmount" type="xs:string" minOccurs="0" />
+					<xs:element name="PreviousSNAPBenefit" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPBenefitAmount" type="xs:string" minOccurs="0" />
+					<xs:element name="DSNAPBenfitIndivDetails" type="DSNAPBenfitIndivDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	
+		<xs:complexType name="DSNAPBenfitIndivDetailsType">
+					<xs:sequence>
+						<xs:element name="ApplicantFirstName" type="xs:string" minOccurs="0" />
+						<xs:element name="ApplicantLastName" type="xs:string" minOccurs="0" />
+					</xs:sequence>
+		</xs:complexType>
+</xs:schema>
+	

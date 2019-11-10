@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="robot" class="com.baw.beans.Robot" autowire="byType">
+		<property name="robotId" value="5001" />
+		<property name="robotType" value="Military Robots" />
+	</bean>
+
+	<bean id="chip" class="com.baw.beans.Chip" autowire-candidate="false">
+		<property name="chipId" value="1002" />
+		<property name="chipType" value="Chip-64-Bit" />
+	</bean>
+
+	<bean id="chip1" class="com.baw.beans.Chip">
+		<property name="chipId" value="1002" />
+		<property name="chipType" value="Chip-64-Bit" />
+	</bean>
+</beans>

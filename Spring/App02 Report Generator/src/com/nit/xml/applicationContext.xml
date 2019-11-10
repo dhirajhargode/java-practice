@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="rg" class="com.nit.beans.ReportGenerator">
+		<property name="irg" ref="excel"></property>
+	</bean>
+
+	<bean id="pdf" class="com.nit.beans.PdfReportGenerator"/>
+	<bean id="excel" class="com.nit.beans.ExcelReportGenerator"/>
+
+</beans>

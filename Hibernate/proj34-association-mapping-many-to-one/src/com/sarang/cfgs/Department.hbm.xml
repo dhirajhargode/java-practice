@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Department" table="sarang_department">
+		<id name="did" column="did"></id>
+		<property name="dname" column="dname"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+package com.jdbc.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jdbc.service.DBOperationService;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		ApplicationContext ctx =new ClassPathXmlApplicationContext("com/jdbc/cfg/Application-Context.xml");
+		DBOperationService service = ctx.getBean("service", DBOperationService.class);
+		
+		
+		String insert = service.registerEmployee(101, "Sushil", "ASE", 50000.00);
+		System.out.println(insert);
+	}
+
+}

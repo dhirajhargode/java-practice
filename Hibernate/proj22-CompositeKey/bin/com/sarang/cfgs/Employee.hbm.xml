@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.employeeComposit">
+		<composite-id name="id" class="com.sarang.domain.Composite">
+			<key-property name="proj_id"></key-property>
+			<key-property name="prgm_id"></key-property>
+		</composite-id>
+		<property name="prgmName"></property>
+		<property name="projName"></property>
+		<property name="salary"></property>
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Employee" dynamic-update="true" dynamic-insert="true">
+		<id name="eid"></id>
+		<property name="ename"></property>
+		<property name="lname"></property>
+		<property name="mail"></property>
+	</class>
+</hibernate-mapping>

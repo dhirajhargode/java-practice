@@ -1,0 +1,22 @@
+DEBUG - Log4jApp1.mod1.SelectTest.static.Application Started
+WARN - Log4jApp1.mod1.SelectTest.main().jdbc driver register
+INFO - Log4jApp1.mod1.SelectTest.main().jdbc connection established
+DEBUG - Log4jApp1.mod1.SelectTest.main().jdbc.Statement created
+DEBUG - Log4jApp1.mod1.SelectTest.main().ResultSet object created
+DEBUG - Log4jApp1.mod1.SelectTest.main().ResultSet Object processed
+DEBUG - Log4jApp1.mod1.SelectTest.main().ResultSet Object processed
+DEBUG - log4jApp1.mod1.SelectTest.main().finally block
+DEBUG - log4jApp1.mod1.SelectTest.main().finally ResultSet object close
+DEBUG - log4jApp1.mod1.SelectTest.main().finally Statement close
+DEBUG - log4jApp1.mod1.SelectTest.main().finally Connection close
+DEBUG - Log4jApp1.mod1.SelectTest.static.Application Started
+WARN - Log4jApp1.mod1.SelectTest.main().jdbc driver register
+INFO - Log4jApp1.mod1.SelectTest.main().jdbc connection established
+DEBUG - Log4jApp1.mod1.SelectTest.main().jdbc.Statement created
+DEBUG - Log4jApp1.mod1.SelectTest.main().ResultSet object created
+DEBUG - Log4jApp1.mod1.SelectTest.main().ResultSet Object processed
+DEBUG - Log4jApp1.mod1.SelectTest.main().ResultSet Object processed
+DEBUG - log4jApp1.mod1.SelectTest.main().finally block
+DEBUG - log4jApp1.mod1.SelectTest.main().finally ResultSet object close
+DEBUG - log4jApp1.mod1.SelectTest.main().finally Statement close
+DEBUG - log4jApp1.mod1.SelectTest.main().finally Connection close

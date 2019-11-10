@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Domain" table="employee">
+		<id name="id" column="EID" />
+		<property name="fname" column="ENAME" />
+		<property name="lname" column="LNAME" />
+		<property name="mail" column="MAIL" />
+	</class>
+
+</hibernate-mapping>

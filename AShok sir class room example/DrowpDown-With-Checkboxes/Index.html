@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="select.js"></script>
+    <link href="main.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.testSelAll = $('.testSelAll').SumoSelect({okCancelInMulti:true, selectAll:true });
+            window.testSelAll2 = $('.testSelAll2').SumoSelect({selectAll:true});
+        });
+    </script>
+    <style type="text/css">
+        body{font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#444;font-size:13px;}
+        p,div,ul,li{padding:0px; margin:0px;}
+    </style>
+	<title>Ashok IT School</title>
+</head>
+<body>
+   
+<br>
+    <h1>Dropdown values with Checkboxes - With Select all (Master checkbox)option</h1>
+    &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;
+<select multiple="multiple" placeholder="Select Program(s)" onchange="console.log($(this).children(':selected').length)" class="testSelAll">
+        <option value="MAGI">MAGI</option>
+       <option value="Medicaid">Medicaid</option>
+       <option value="Medicare">Medicare</option>
+       <option value="QHP">QHP</option>
+       <option value="SNAP">SNAP</option>
+       <option value="CCAP">CCAP</option>
+       <option value="RIW">RIW</option>
+       <option value="SSP">SSP</option>
+
+</select>
+
+        &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;
+<select multiple="multiple" placeholder="Select Program(s)" onchange="console.log($(this).children(':selected').length)" class="testSelAll2">
+       <option value="MAGI">MAGI</option>
+       <option value="Medicaid">Medicaid</option>
+       <option value="Medicare">Medicare</option>
+       <option value="QHP">QHP</option>
+       <option value="SNAP">SNAP</option>
+       <option value="CCAP">CCAP</option>
+       <option value="RIW">RIW</option>
+       <option value="SSP">SSP</option>
+</select>
+</body>
+</html>

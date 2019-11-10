@@ -1,0 +1,68 @@
+package com.mvc.report.views;
+
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.web.servlet.view.document.AbstractXlsxView;
+
+import com.mvc.report.model.Product;
+
+public class MyExcelView extends AbstractXlsxView {
+
+	protected void buildExcelDocument(Map arg0, Workbook book, HttpServletRequest arg2, HttpServletResponse arg3)
+			throws Exception {
+		Sheet sheet = book.createSheet();
+		Row headerrow = sheet.createRow(0);
+
+		headerrow.createCell(0).setCellValue("Sr. No.");
+		headerrow.createCell(0).setCellValue("Prod. Id");
+		headerrow.createCell(0).setCellValue("Prod. Name");
+
+		List<Product> plist = (List) map.get("products");
+		if (!plist.isEmpty()) {
+			int rowIndex = 1;
+			for (Product p : plist) {
+				Row datarow = sheet.createRow(rowIndex);
+				datarow.createCell(0).setCellValue(rowIndex);
+				datarow.createCell(1).setCellValue(p.getPid());
+				datarow.createCell(2).setCellValue(p.getPname());
+				rowIndex++;
+
+			}
+
+		
+	}
+
+	/*@Override
+	protected void buildExcelDocument(Map<String, Object> map, Workbook book, HttpServletRequest req,
+			HttpServletResponse res) throws Exception {
+
+		Sheet sheet = book.createSheet();
+		Row headerrow = sheet.createRow(0);
+
+		headerrow.createCell(0).setCellValue("Sr. No.");
+		headerrow.createCell(0).setCellValue("Prod. Id");
+		headerrow.createCell(0).setCellValue("Prod. Name");
+
+		List<Product> plist = (List) map.get("products");
+		if (!plist.isEmpty()) {
+			int rowIndex = 1;
+			for (Product p : plist) {
+				Row datarow = sheet.createRow(rowIndex);
+				datarow.createCell(0).setCellValue(rowIndex);
+				datarow.createCell(1).setCellValue(p.getPid());
+				datarow.createCell(2).setCellValue(p.getPname());
+				rowIndex++;
+
+			}
+		}
+
+	}*/
+
+}

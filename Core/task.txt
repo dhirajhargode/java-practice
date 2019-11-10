@@ -1,0 +1,24 @@
+admin
+	add manager
+	view list
+	add public employye
+	view public list
+	
+	session
+	
+	nahi pahije
+		service  ===> list of user ,list of manager   replace  
+		home 
+		gallery
+	
+
+
+user
+	user home 
+		home 
+		event ==> event below
+		
+		
+	domestic tank
+	event 
+	

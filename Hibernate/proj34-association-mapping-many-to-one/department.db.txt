@@ -1,0 +1,1 @@
+ create table sarang_department(did number primary key,dname varchar2(20));

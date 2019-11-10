@@ -1,0 +1,1 @@
+create table sarang_user(userid number primary key,uname varchar2(20));

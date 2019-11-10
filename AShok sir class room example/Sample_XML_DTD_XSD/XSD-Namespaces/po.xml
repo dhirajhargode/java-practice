@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<est:purchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ebay.in/sales/types file:///C:/Workshop/Trainings/WebServices/po.xsd" xmlns:est="http://ebay.in/sales/types">
+	<orderItems>
+		<item>
+			<itemCode>IC1001</itemCode>
+			<quantity>35</quantity>
+		</item>
+		<item>
+			<itemCode>IC1002</itemCode>
+			<quantity>10</quantity>
+		</item>
+	</orderItems>
+	<usShippingAddress est:type="permanent">
+		<addressLine1>Addr1</addressLine1>
+		<addressLine2>Addr2</addressLine2>
+		<city>Hyd</city>
+		<state>AP</state>
+		<zip>3534</zip>
+		<country>India</country>
+		<county>24</county>
+	</usShippingAddress>	
+</est:purchaseOrder>

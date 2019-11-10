@@ -1,0 +1,1 @@
+ create table sarang_user_map(userid number primary key,username varchar2(20));

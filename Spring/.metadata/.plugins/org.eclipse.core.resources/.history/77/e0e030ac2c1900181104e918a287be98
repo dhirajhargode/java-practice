@@ -1,0 +1,31 @@
+package com.nt.bo;
+
+public class StudentBO {
+
+	private int eno;
+	private String name;
+	private String job;
+	private Double salary;
+
+	public void setEno(int eno) {
+		this.eno = eno;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "StudentBO [eno=" + eno + ", name=" + name + ", job=" + job + ", salary=" + salary + "]";
+	}
+
+}

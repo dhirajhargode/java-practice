@@ -1,0 +1,17 @@
+package com.nt.util;
+
+import java.util.List;
+
+import com.nt.model.EmployeeBO;
+
+public class CSVReader {
+	
+	List<EmployeeBO> readData(String path) throws Exception{
+		
+		
+		
+		return null;
+		
+	}
+
+}

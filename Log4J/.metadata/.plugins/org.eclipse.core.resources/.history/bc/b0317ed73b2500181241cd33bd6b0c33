@@ -1,0 +1,5 @@
+package com.log4j.jdbc;
+
+public class SelectTest {
+
+}

@@ -1,0 +1,4 @@
+com\cdac\contactapp\controller\TestController.class
+com\cdac\contactapp\config\ContactAppDispatcherServletInitializer.class
+com\cdac\contactapp\config\SpringWebConfig.class
+com\cdac\contactapp\config\SpringRootConfig.class

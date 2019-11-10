@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="onShare" class="com.cm.besns.Meeting" abstract="true">
+		<property name="meetingType" value="TraigeCall" />
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Ramesh</value>
+				<value>Suresh</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean id="traigeCall" class="com.cm.besns.Meeting" parent="onShare">
+		<property name="meetingType" value="Traige Metting" />
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Johnson</value>
+				<value>Smith</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<bean id="standupCall" class="com.cm.besns.Meeting" parent="onShare">
+		<property name="meetingType" value="Standup Meeting" />
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Sita</value>
+				<value>Gita</value>
+
+			</set>
+		</property>
+	</bean>
+
+	<bean id="weeklyCall" class="com.cm.besns.Meeting" parent="standupCall">
+		<property name="meetingType" value="Weekly Status Meeting" />
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Rahul</value>
+				<value>Ganesh</value>
+
+			</set>
+		</property>
+	</bean>
+
+
+</beans>

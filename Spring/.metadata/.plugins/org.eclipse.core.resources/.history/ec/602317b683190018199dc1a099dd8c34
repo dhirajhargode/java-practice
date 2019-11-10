@@ -1,0 +1,42 @@
+package com.bo.model;
+
+public class BookStore {
+
+	private int bookid;
+	private String authorname;
+	private String bookname;
+	private double price;
+	private String isbn;
+
+	public BookStore() {
+	}
+
+	public BookStore(int bookid, String authorname, String bookname, double price, String isbn) {
+		this.bookid = bookid;
+		this.authorname = authorname;
+		this.bookname = bookname;
+		this.price = price;
+		this.isbn = isbn;
+	}
+
+	public void setBookid(int bookid) {
+		this.bookid = bookid;
+	}
+
+	public void setAuthorname(String authorname) {
+		this.authorname = authorname;
+	}
+
+	public void setBookname(String bookname) {
+		this.bookname = bookname;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+}

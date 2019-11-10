@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="reportCtx" class="com.nit.beans.ReportContext">
+		<constructor-arg ref="pdf" />
+	</bean>
+
+	<bean id="excel" class="com.nit.beans.ExcelReportGeneratorImpl" />
+	<bean id="pdf" class="com.nit.beans.PdfReportGeneratorImpl" />
+
+</beans>

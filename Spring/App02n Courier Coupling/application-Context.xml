@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="fk" class="com.nit.flipkart.beans.Filpkart">
+		<property name="courier" ref="dtdc"></property>
+	</bean>
+	<bean id="dtdc" class="com.nit.flipkart.beans.DTDC"/>
+	<bean id="bd" class="com.nit.flipkart.beans.BlueDraft"/>
+	<bean id="ff" class="com.nit.flipkart.beans.FirstFight"/>
+	
+
+</beans>

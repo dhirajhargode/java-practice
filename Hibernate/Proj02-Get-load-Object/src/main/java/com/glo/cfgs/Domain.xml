@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.glo.domain.Domain" table="hib_emp">
+
+		<id name="id"></id>
+		<property name="name" />
+		<property name="lname" />
+
+
+	</class>
+
+
+</hibernate-mapping>

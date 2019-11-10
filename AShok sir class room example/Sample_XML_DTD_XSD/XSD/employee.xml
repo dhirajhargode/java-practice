@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/NIT/Webservices/XSD/employee.xsd">
+	<firstname>Ashok</firstname>
+	<lastname>Bollepalli</lastname>
+	<email>ashok@microsoft.com</email>
+</employee>

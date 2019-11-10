@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Log4j 01 App1/src/com/log4j/jdbc/SelectTest1.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.log4j.jdbc.SelectTest1"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Log4j 01 App1"/>
+</launchConfiguration>

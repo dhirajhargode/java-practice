@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Application-Context.xml&apos; to &apos;JDBC05 SimpleCall/src/com.sc.cfg&apos;&#x0D;&#x0A;- Original project: &apos;JDBC05 SimpleCall&apos;&#x0D;&#x0A;- Destination element: &apos;JDBC05 SimpleCall/src/com.sc.cfg&apos;&#x0D;&#x0A;- Original element: &apos;Application-Context.xml&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;com.sc.cfg" element1="src/com/sc/test/Application-Context.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1519504509390" units="0" version="1.0"/>
+</session>

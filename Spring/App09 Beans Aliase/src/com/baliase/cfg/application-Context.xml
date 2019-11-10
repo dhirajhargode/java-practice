@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="orderManager" class="com.baliase.beans.OrderManger">
+		<property name="person" ref="personInfo"/>
+		<property name="order" ref="orderInfo"/>
+		<property name="addr" ref="shippAdd"/>
+		<property name="blueDartDelivey" ref="blueDart"/>
+		<property name="dtdcDelivey" ref="dtdc"/>
+	</bean>
+	
+	<bean id="personInfo" class="com.baliase.beans.PersonInfo">
+		<property name="name" value="Ramesh"/>
+		<property name="mobNo" value="8787878787"/>
+		<property name="email" value="abc@gmail.com"/>
+		</bean>
+	
+	<bean id="orderInfo" class="com.baliase.beans.OrderInfo">
+		<property name="orderNo" value="101"/>
+		<property name="orderPrice" value="50000"/>
+		<property name="item">
+			<set value-type="java.lang.String">
+				<value>mobile IPhone 6s</value>
+				<value>fastrack wrist watch</value>
+			</set>
+		</property>
+	</bean>
+	
+	<bean id="shippAdd" class="com.baliase.beans.ShippingInfo">
+		<property name="area" value="S.R.Nagar"/>
+		<property name="city" value="hyd"/>
+		<property name="country" value="India"/>
+		<property name="zipcode" value="500036"/>
+	
+	</bean>
+	
+<!-- 	<bean id="blueDart" class="com.baliase.beans.BlueDartServiceImpl"/>
+ -->	<bean id="dtdc" class="com.baliase.beans.DTDCServiceImpl"/>
+<alias name="dtdc" alias="blueDart"/>
+
+
+</beans>

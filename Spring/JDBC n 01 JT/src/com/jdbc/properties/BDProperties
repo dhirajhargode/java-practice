@@ -1,0 +1,2 @@
+create table EMPLOYEE(EmpNo number(5),Name varchar2(20), Job varchar2(10), Salary number(10,2));
+select * from employee;

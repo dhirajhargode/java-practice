@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ebay.in/sales/types" xmlns:as="http://amazon.org/sales/marketing" xmlns:et="http://ebay.in/sales/types">
+	
+	<xs:import namespace="http://amazon.org/sales/marketing" schemaLocation="po1.xsd"/>
+	
+	<xs:element name="orderItems" type="et:orderItemsType"/>
+	
+	<xs:complexType name="orderItemsType">
+		<xs:sequence>
+			<xs:element ref="as:item"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,224 @@
+CREATE SCHEMA `smartcitycleancity` ;
+
+CREATE TABLE `smartcitycleancity`.`users` (
+  `userId` INT NOT NULL AUTO_INCREMENT,
+  `FirstName` NVARCHAR(45) NOT NULL,
+  `LastName` NVARCHAR(45) NULL,
+  `UserName` NVARCHAR(45) NOT NULL,
+  `Password` NVARCHAR(45) NOT NULL,
+  `Email` NVARCHAR(100) NOT NULL,
+  `ContactNumber` NVARCHAR(12) NOT NULL,
+  `Gender` ENUM('Male', 'Female', 'Other') NOT NULL,
+  `DateOfBirth` DATE NULL,
+  `Address` NVARCHAR(200) NOT NULL,
+  `City` NVARCHAR(45) NOT NULL,
+  `State` NVARCHAR(45) NOT NULL,
+  `Role` INT NOT NULL,
+  `LoginStatus` INT NULL DEFAULT 1,
+  PRIMARY KEY (`userId`),
+  UNIQUE INDEX `UserName_UNIQUE` (`UserName` ASC));
+
+CREATE TABLE `smartcitycleancity`.`Managers` (
+  `ManagerId` INT NOT NULL AUTO_INCREMENT,
+ `AreaAlloted` int NOT NULL, `FirstName` NVARCHAR(45) NOT NULL,
+  `LastName` NVARCHAR(45) NULL,
+  `UserName` NVARCHAR(45) NOT NULL,
+  `Password` NVARCHAR(45) NOT NULL,
+  `Email` NVARCHAR(100) NOT NULL,
+  `ContactNumber` NVARCHAR(12) NOT NULL,
+  `Gender` ENUM('Male', 'Female', 'Other') NOT NULL,
+  `DateOfBirth` DATE NULL,
+  `Address` NVARCHAR(200) NOT NULL,
+  `City` NVARCHAR(45) NOT NULL,
+  `State` NVARCHAR(45) NOT NULL,
+  `Role` INT NOT NULL,
+  `LoginStatus` INT NULL DEFAULT 1,
+  PRIMARY KEY (`ManagerId`),
+  UNIQUE INDEX `UserName_UNIQUE` (`UserName` ASC));
+
+CREATE TABLE `smartcitycleancity`.`area` (
+  `AreaId` INT NOT NULL AUTO_INCREMENT,
+  `City` NVARCHAR(45) NULL,
+  `State` NVARCHAR(45) NULL,
+  PRIMARY KEY (`AreaId`));
+
+CREATE TABLE `smartcitycleancity`.`Workers` (
+ `WorkerId` INT NOT NULL AUTO_INCREMENT,
+`WorkerType` nvarchar(50), `AreaAlloted` int NOT NULL, `FirstName` NVARCHAR(45) NOT NULL,
+  `LastName` NVARCHAR(45) NULL,
+  `UserName` NVARCHAR(45) NOT NULL,
+  `Password` NVARCHAR(45) NOT NULL,
+  `Email` NVARCHAR(100) NOT NULL,
+  `ContactNumber` NVARCHAR(12) NOT NULL,
+  `Gender` ENUM('Male', 'Female', 'Other') NOT NULL,
+  `DateOfBirth` DATE NULL,
+  `Address` NVARCHAR(200) NOT NULL,
+  `City` NVARCHAR(45) NOT NULL,
+  `State` NVARCHAR(45) NOT NULL,
+  `Role` INT NOT NULL,
+  `LoginStatus` INT NULL DEFAULT 1,
+  PRIMARY KEY (`WorkerId`),
+  UNIQUE INDEX `UserName_UNIQUE` (`UserName` ASC),foreign key(`AreaAlloted`) references Area(`AreaId`));
+
+CREATE TABLE `smartcitycleancity`.`publicrequest` (
+  `RequestId` INT NOT NULL AUTO_INCREMENT,
+  `UserId` INT NOT NULL,
+  `Location` NVARCHAR(100) NOT NULL,
+  `Description` NVARCHAR(200) NULL,
+  `RequestDate` DATE NOT NULL,
+  `RequestTime` TIME NOT NULL,
+  `IsCompleted` TINYINT NULL DEFAULT 0,
+  `Rating` INT NULL,
+  `Feedback` NVARCHAR(200) NULL,
+  `WorkerAlloted` INT NULL,
+  `Manager` INT NULL,
+  `Photo` LONGBLOB NULL,
+  PRIMARY KEY (`RequestId`));
+  
+ CREATE TABLE `smartcitycleancity`.`privaterequesttype` (
+  `RequestType` NVARCHAR(50) NOT NULL,
+  PRIMARY KEY (`RequestType`)); 
+
+CREATE TABLE `smartcitycleancity`.`userprivaterequest` (
+  `RequestId` INT NOT NULL AUTO_INCREMENT,
+  `UserId` INT NOT NULL,
+  `Location` NVARCHAR(100) NOT NULL,
+  `Description` NVARCHAR(200) NULL,
+  `RequestDate` DATE NOT NULL,
+  `RequestTime` TIME NOT NULL,
+  `IsCompleted` TINYINT NULL DEFAULT 0,
+  `Rating` INT NULL,
+  `Feedback` NVARCHAR(200) NULL,
+  `WorkerAlloted` INT NULL,
+  `HouseArea` int,`NumberOfFloors` int,`WorkersRequired` int,`TankSize` int,`PestControlType` nvarchar(50),`Photo` LONGBLOB NULL,
+  `CompletedOn` DATE , `Amount` DECIMAL(10,0),
+  `RequestType` NVARCHAR(50),
+  PRIMARY KEY (`RequestId`),foreign key(UserId) references Users(UserId),foreign key(WorkerAlloted) references Workers(WorkerId),
+  foreign key(`RequestType`) references privaterequesttype(`RequestType`));
+
+
+CREATE TABLE `smartcitycleancity`.`events` (
+  `EventId` INT NOT NULL AUTO_INCREMENT,
+  `EventName` NVARCHAR(45) NOT NULL,
+  `Description` NVARCHAR(200) NULL,
+  `EventDate` DATE NOT NULL,
+  `EventTime` TIME NOT NULL,
+  `Photo` LONGBLOB NULL,`UserId` int,
+  PRIMARY KEY (`EventId`),foreign key(UserId) references Users(userID));
+
+CREATE TABLE `smartcitycleancity`.`complaints` (
+  `ComplaintId` INT NOT NULL AUTO_INCREMENT,
+  `UserId` INT NOT NULL,
+  `PublicRequestId` INT NOT NULL,
+  PRIMARY KEY (`ComplaintId`),foreign key(PublicRequestId) references PublicRequest(RequestId));
+
+
+CREATE TABLE `smartcitycleancity`.`volunteer` (
+  `id` INT NOT NULL,
+  `EventId` INT NOT NULL,
+  `UserId` INT NOT NULL,
+  PRIMARY KEY (`id`),foreign key(EventId) references Events(EventId),foreign key(UserId) references Users(UserId));
+
+CREATE TABLE `smartcitycleancity`.`publicworker` (
+  `workerId` INT NOT NULL AUTO_INCREMENT,
+  `firstname` VARCHAR(45) NULL,
+  `lastname` VARCHAR(45) NOT NULL,
+  `areaAlloted` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `dob` DATE NOT NULL,
+  `joiningdate` DATE NOT NULL,
+  `contactNumber` VARCHAR(12) NULL,
+  `Address` VARCHAR(45) NULL,
+  PRIMARY KEY (`workerId`),
+  UNIQUE INDEX `firstname_UNIQUE` (`firstname` ASC),
+  UNIQUE INDEX `contactNumber_UNIQUE` (`contactNumber` ASC));
+  
+  
+  ALTER TABLE `smartcitycleancity`.`events` 
+ADD CONSTRAINT `userID`
+  FOREIGN KEY (`UserId`)
+  REFERENCES `smartcitycleancity`.`users` (`userId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `smartcitycleancity`.`managers` 
+ADD INDEX `areaAlloted_idx` (`AreaAlloted` ASC);
+ALTER TABLE `smartcitycleancity`.`managers` 
+ADD CONSTRAINT `areaAlloted`
+  FOREIGN KEY (`AreaAlloted`)
+  REFERENCES `smartcitycleancity`.`area` (`AreaId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+  
+  ALTER TABLE `smartcitycleancity`.`publicrequest` 
+ADD INDEX `managerId_idx` (`Manager` ASC),
+ADD INDEX `userId_idx` (`UserId` ASC),
+ADD INDEX `workerId_idx` (`WorkerAlloted` ASC);
+ALTER TABLE `smartcitycleancity`.`publicrequest` 
+ADD CONSTRAINT `managerId`
+  FOREIGN KEY (`Manager`)
+  REFERENCES `smartcitycleancity`.`managers` (`ManagerId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+ADD CONSTRAINT `userId`
+  FOREIGN KEY (`UserId`)
+  REFERENCES `smartcitycleancity`.`users` (`userId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+ADD CONSTRAINT `workerId`
+  FOREIGN KEY (`WorkerAlloted`)
+  REFERENCES `smartcitycleancity`.`workers` (`WorkerId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+ALTER TABLE `smartcitycleancity`.`publicrequest` 
+RENAME TO  `smartcitycleancity`.`userpublicrequest` ;
+
+ALTER TABLE `smartcitycleancity`.`complaints` 
+RENAME TO  `smartcitycleancity`.`userpubliccomplaint` ;
+  
+  
+ALTER TABLE `smartcitycleancity`.`userpubliccomplaint` 
+ADD COLUMN `Description` VARCHAR(200) NULL AFTER `PublicRequestId`,
+ADD COLUMN `date` DATE NULL AFTER `Description`,
+ADD COLUMN `isResolved` TINYINT(4) NULL AFTER `date`;
+
+
+  
+  
+
+create table login(id int(11),username varchar(50),password varchar(50),firstName varchar(50),role int(1),loginstatus int(1));
+
+create trigger userLogin after insert on users for each row insert into login(id,username,password,firstName,role,loginstatus) values(new.userid,new.username,new.password,new.firstname,new.role,new.loginstatus);
+
+create trigger managerLogin after insert on managers for each row insert into login(id,username,password,firstName,role,loginstatus) values(new.managerid,new.username,new.password,new.firstname,new.role,new.loginstatus);
+
+create trigger workerLogin after insert on workers for each row insert into login(id,username,password,firstName,role,loginstatus) values(new.workerid,new.username,new.password,new.firstname,new.role,new.loginstatus);
+
+
+insert into area(`city`,`state`) values('Kharghar','Maharashtra');
+insert into area(`city`,`state`) values('Vashi','Maharashtra');
+insert into area(`city`,`state`) values('Belapur CBD','Maharashtra');
+insert into area(`city`,`state`) values('Panvel','Maharashtra');
+insert into area(`city`,`state`) values('Nerul','Maharashtra');
+insert into area(`city`,`state`) values('Seawood Darave','Maharashtra');
+insert into area(`city`,`state`) values('Juinagar','Maharashtra');
+insert into area(`city`,`state`) values('Khandeshwar','Maharashtra');
+insert into area(`city`,`state`) values('Sanpada','Maharashtra');
+
+
+
+insert into users values(1,'Dhiraj','Hargode','dhiru','dhiru','dhiraj@gmail.com','8793686922','Male','1995/02/10','Swastik Nagar','Wardha','Maharastra',1,1);	
+insert into managers values(101,4,'Shubham','Deore','shubh123','shubh','shubh@gmail.com','8856569971','Male','1995/07/21','Sector 7','Panvel','Maharastra',2,1);	
+insert into workers values(1001,'Home Cleaning',1,'Mayur','walke','mayur','mayur','mayur@gmail.com','7773568980','Male','1995/07/15','Amravati','Amravati','Maharastra',3,1);
+insert into users values(2001,'Mayank','Deshmukh','mayank','mayank','mayank@gmail.com','8798654563','Male','1996/03/11','Dombivali','Navi Mumbai','Maharastra',4,1);
+
+
+  
+insert into privaterequesttype values("Home Cleaning");
+insert into privaterequesttype values("Place Cleaning");
+insert into privaterequesttype values("Tank Cleaning");
+insert into privaterequesttype values("Pest Control");
+

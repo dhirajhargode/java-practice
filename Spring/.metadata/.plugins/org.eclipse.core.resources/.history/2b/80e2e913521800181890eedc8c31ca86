@@ -1,0 +1,25 @@
+package com.npjt.test;
+
+import java.util.List;
+
+import com.npjt.csv.CSVFileReader;
+import com.npjt.model.Book;
+
+public class TestBatchOperation {
+
+	public static void main(String[] args) throws Exception {
+
+		String path = "BookData.csv";
+		CSVFileReader reader = new CSVFileReader();
+		List<Book> books = reader.reader(path);
+		
+		if (!books.isEmpty()) {
+			System.out.println("Not Empty");
+			for (Book b : books) {
+				System.out.println(b);
+			}
+		}
+
+	}
+
+}

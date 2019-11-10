@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="m" class="com.nullinjection.beans.Movie">
+		<constructor-arg name="movieId" value="101"/>
+		<constructor-arg name="hero" value="Prabhas"/>
+		<constructor-arg name="heroine" value="Kajal"/>
+		<constructor-arg name="movieName">
+			<null/>
+		</constructor-arg>
+	</bean>
+
+</beans>

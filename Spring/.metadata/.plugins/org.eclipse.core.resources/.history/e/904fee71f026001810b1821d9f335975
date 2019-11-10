@@ -1,0 +1,9 @@
+package com.nt.dao;
+
+public class ListEmpDAO {
+
+	private static final String GET_ALL_EMP_DETAILS = "SELECT EMPNO, ENAME, JOB , SALARY FROM EMPLOYEE";
+	
+	private j
+
+}

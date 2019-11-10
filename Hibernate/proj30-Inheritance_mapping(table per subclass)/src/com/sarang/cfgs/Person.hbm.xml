@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Person" table="person1">
+		<id name="pid" type="int" length="5"></id>
+		<property name="name" type="string" length="10"></property>
+		<property name="compony" type="string" length="10"></property>
+
+		<joined-subclass name="com.sarang.domain.Employee"
+			table="employee1">
+			<key column="person_id"></key>
+			<property name="salary" type="int" length="7"></property>
+			<property name="department" type="string" length="10"></property>
+		</joined-subclass>
+		<joined-subclass name="com.sarang.domain.Customer"
+			table="customer1">
+			<key column="person_id"></key>
+			<property name="address" type="string" length="10"></property>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

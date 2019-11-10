@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Employee" table="sarang_employee">
+		<id name="eid" column="eid"></id>
+		<property name="ename" column="ename"></property>
+		<property name="salary" column="salary"></property>
+		<many-to-one name="dept" class="com.sarang.domain.Department"
+			cascade="all" column="unid">
+		</many-to-one>
+	</class>
+</hibernate-mapping>

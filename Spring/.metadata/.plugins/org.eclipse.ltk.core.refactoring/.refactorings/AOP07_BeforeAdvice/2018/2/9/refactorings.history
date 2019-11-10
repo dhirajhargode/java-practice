@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;AOP07_BeforeAdvice&apos;&#x0D;&#x0A;- Original project: &apos;AOP07_BeforeAdvice&apos;&#x0D;&#x0A;- Original element: &apos;AOP07_BeforeAdvice/src/main/java/com.dhiraj.AOP07_BeforeAdvice&apos;" description="Delete element" element1="/src\/main\/java&lt;com.dhiraj.AOP07_BeforeAdvice" element2="/src\/main\/java&lt;com.dhiraj" element3="/src\/main\/java&lt;com" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1519761848724" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT db-host     (#PCDATA)>
+<!ELEMENT db-name     (#PCDATA)>
+<!ELEMENT db-user     (#PCDATA)>
+<!ELEMENT db-password (#PCDATA)>
+<!ELEMENT db-config (db-host,db-name,db-user,db-password)>
+

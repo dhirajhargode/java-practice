@@ -1,0 +1,1 @@
+ create table sarang_employee(eid number primary key,ename varchar2(20),salary number,unid number,foreign key(unid) references sarang_department(did));

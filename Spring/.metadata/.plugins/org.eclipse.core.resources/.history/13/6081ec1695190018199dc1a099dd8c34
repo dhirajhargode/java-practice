@@ -1,0 +1,29 @@
+package com.njt.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+public class EmployeeDao {
+	private static final String insert_emp = "insert into Employee(EmpNo, Name, Job, Salary) values(:id, :name, :job, :sal)";
+	private NamedParameterJdbcTemplate njt;
+
+	public void insertEmploy(int no, String name, String job, Double sal) {
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("id", no);
+		param.put("name", name);
+		param.put("job", job);
+		param.put("sal", sal);
+		njt.update(insert_emp, param);
+	}
+
+	public NamedParameterJdbcTemplate getNjt() {
+		return njt;
+	}
+
+	public void setNjt(NamedParameterJdbcTemplate njt) {
+		this.njt = njt;
+	}
+
+}

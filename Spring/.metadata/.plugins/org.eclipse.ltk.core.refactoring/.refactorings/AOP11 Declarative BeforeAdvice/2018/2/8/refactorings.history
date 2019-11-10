@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;application-Context.xml&apos; to &apos;AOP07 N/src/com.nt.cfg&apos;&#x0D;&#x0A;- Original project: &apos;AOP07 N&apos;&#x0D;&#x0A;- Destination element: &apos;AOP07 N/src/com.nt.cfg&apos;&#x0D;&#x0A;- Original element: &apos;application-Context.xml&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;com.nt.cfg" element1="src/com/nt/service/application-Context.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1518950608117" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,53 @@
+package com.njt.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.njt.mapper.EmployeeMapper;
+import com.njt.model.Employee;
+
+public class EmployeeDao {
+	private static final String insert_emp = "insert into Employee(EmpNo, Name, Job, Salary) values(:id, :name, :job, :sal)";
+	private static final String Find_Name_By_ID = "SELECT Name FROM Employee WHERE EmpNo=:id";
+	private static final String Find_By_Name = "SELECT * FROM Employee WHERE EmpNo=:id";
+	private static final String Find_All_Employee = "SELECT * FROM Employee";
+	private NamedParameterJdbcTemplate njt;
+
+	public int insertEmploy(int no, String name, String job, Double sal) {
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("id", no);
+		param.put("name", name);
+		param.put("job", job);
+		param.put("sal", sal);
+		return njt.update(insert_emp, param);
+	}
+
+	public String findName(int no) {
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("id", no);
+		return njt.queryForObject(Find_Name_By_ID, paramMap, String.class);
+	}
+
+	public Employee findEmpDetailByName(int no) {
+		MapSqlParameterSource param = new MapSqlParameterSource();
+		param.addValue("id", no);
+		Employee e = new Employee();
+		e.getEno();
+		e.getName();
+		e.getJob();
+		e.getSal();
+		return njt.queryForObject(Find_Name_By_ID, param, new EmployeeMapper());
+	}
+
+	public NamedParameterJdbcTemplate getNjt() {
+		return njt;
+	}
+
+	public void setNjt(NamedParameterJdbcTemplate njt) {
+		this.njt = njt;
+	}
+
+}

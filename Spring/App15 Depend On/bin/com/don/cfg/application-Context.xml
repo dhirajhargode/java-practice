@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="cache" class="com.don.beans.Cache">
+	</bean>
+	
+	<bean id="cacheManager" class="com.don.beans.CacheManager">
+		<constructor-arg name="cache" ref="cache" />
+		<constructor-arg value="C_ri" />
+	</bean>
+
+	<bean id="plec" 
+	class="com.don.beans.PersnalLoanEMICompute" 
+	depends-on="cacheManager" >
+	<property name="cache" ref="cache"></property>
+	</bean>
+
+</beans>

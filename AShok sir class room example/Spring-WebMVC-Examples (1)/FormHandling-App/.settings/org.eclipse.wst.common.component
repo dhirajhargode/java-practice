@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="FormHandling-App">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="spring-webmvc-4.3.9.RELEASE-sources.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-webmvc-4.3.9.RELEASE-sources.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.3.9.RELEASE-javadoc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-web-4.3.9.RELEASE-javadoc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-websocket-4.3.9.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-websocket-4.3.9.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx-4.3.9.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-tx-4.3.9.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-portlet-4.3.9.RELEASE-sources.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-webmvc-portlet-4.3.9.RELEASE-sources.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.3.9.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-web-4.3.9.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-4.3.9.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-webmvc-4.3.9.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-websocket-4.3.9.RELEASE-sources.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-websocket-4.3.9.RELEASE-sources.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-portlet-4.3.9.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-webmvc-portlet-4.3.9.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.3.9.RELEASE-sources.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-web-4.3.9.RELEASE-sources.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-4.3.9.RELEASE-javadoc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-webmvc-4.3.9.RELEASE-javadoc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aspectjrt-1.6.11.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/aspectjrt-1.6.11.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-portlet-4.3.9.RELEASE-javadoc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-webmvc-portlet-4.3.9.RELEASE-javadoc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-websocket-4.3.9.RELEASE-javadoc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/SimpleFormController-App/WebContent/WEB-INF/lib/spring-websocket-4.3.9.RELEASE-javadoc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/FormHandling-App/build/classes"/>
+        <property name="context-root" value="FormHandling-App"/>
+    </wb-module>
+</project-modules>

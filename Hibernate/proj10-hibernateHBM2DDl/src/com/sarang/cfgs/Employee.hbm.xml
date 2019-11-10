@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Employee">
+		<id name="eid" type="string" length="20"></id>
+		<property name="fname" type="string" length="20" not-null="true"></property>
+		<property name="lname" type="string" length="20" unique="true"></property>
+		<property name="mail" type="string" length="20" unique="true"></property>
+	</class>
+</hibernate-mapping>

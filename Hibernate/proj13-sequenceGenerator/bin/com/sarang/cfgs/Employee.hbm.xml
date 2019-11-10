@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Employee">
+		<id name="eid" column="emp">
+			<generator class="sequence">
+			<param name="sequence_name">sarang_sequence</param>
+			</generator>
+		</id>
+		<property name="fname"></property>
+		<property name="lname"></property>
+		<property name="mail"></property>
+
+	</class>
+
+
+</hibernate-mapping>

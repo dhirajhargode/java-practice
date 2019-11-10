@@ -1,0 +1,3 @@
+ create table sarang_phoneno(phno number primary key,type varchar2(20),unid  number ,foreign key(unid) references sarang_user(userid));
+
+Table created.

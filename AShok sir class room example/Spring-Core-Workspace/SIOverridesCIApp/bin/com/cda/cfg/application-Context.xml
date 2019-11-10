@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="eng1" class="com.cda.beans.Engine">
+		<property name="engineId" value="101" />
+		<property name="engName" value="Engine-1" />
+		<property name="fuelType" value="Diesel" />
+	</bean>
+	<bean id="eng2" class="com.cda.beans.Engine">
+		<property name="engineId" value="102" />
+		<property name="engName" value="Engine-2" />
+		<property name="fuelType" value="Petrol" />
+	</bean>
+
+	<bean id="c" class="com.cda.beans.Car">
+		<property name="eng" ref="eng1" />
+		<constructor-arg name="eng" ref="eng2" />
+	</bean>
+</beans>
+ 

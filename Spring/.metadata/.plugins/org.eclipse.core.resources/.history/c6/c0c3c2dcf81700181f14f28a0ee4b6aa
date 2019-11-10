@@ -1,0 +1,65 @@
+package com.dc.test;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.dc.beans.AppDao;
+
+public class TestDMLQuery {
+
+	public static void main(String[] args) {
+
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/dc/cfg/beans.xml");
+		AppDao dao = ctx.getBean("appdao", AppDao.class);
+		/* insert record by using direct calling method Update() */
+		// dao.insertBook(103, "Rod Johnson", "Spring MVC", 900.00, "ISBN003");
+
+		/* insert record by using preparedStatement calling method execute() */
+		// dao.insertBookWithPstm(102, "Rod Johnson", "Spring JDBC", 400.00, "ISBN002");
+
+		/* retrive one data by using RowMapper() */
+		// System.out.println(dao.findBookId(101));
+
+		/* retrive multiple data */
+
+		/*
+		 * List<Book> books = dao.findBookByPrice(100.00); if (!books.isEmpty()) { for
+		 * (Book b : books) { System.out.println(b); } }
+		 */
+
+		System.out.println(dao.findAllBook());
+
+		/* retrive one record data in key and value format */
+
+		/*
+		 * Map<String, Object> map=dao.findByUsingMap(103); if(!map.isEmpty()) {
+		 * Set<String> keys= map.keySet(); Iterator keyitr=keys.iterator();
+		 * while(keyitr.hasNext()) { String key=(String)keyitr.next(); Object
+		 * value=map.get(key); System.out.println(key+"=="+value); } }
+		 */
+
+		/* retrive multiple record data in key and value format */
+
+		List<Map<String, Object>> map = dao.findByUsingListMap();
+		if (!map.isEmpty()) {
+			for (Map<String, Object> m : map) {
+				Set<String> keys = m.keySet();
+				Iterator keyitr = keys.iterator();
+				while (keyitr.hasNext()) {
+					String key = (String) keyitr.next();
+					Object value = m.get(key);
+					System.out.println(key + "==" + value);
+				}
+				System.out.println("===================");
+			}
+
+		}
+
+	}
+
+}

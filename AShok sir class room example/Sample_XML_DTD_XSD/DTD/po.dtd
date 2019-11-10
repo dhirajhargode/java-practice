@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT quantity (#PCDATA) >
+<!ELEMENT ItemCode (#PCDATA) >
+<!ELEMENT city (#PCDATA) >
+<!ELEMENT state (#PCDATA) >
+<!ELEMENT zip (#PCDATA) >
+<!ELEMENT country (#PCDATA) >
+<!ELEMENT addrLine2 (#PCDATA) >
+<!ELEMENT addrLine1 (#PCDATA) >
+<!ELEMENT shipping-address (addrLine1,addrLine2,city,state,zip,country) >
+<!ELEMENT item (ItemCode,quantity) >
+<!ELEMENT orderItems (item+) >
+<!ELEMENT purchaseOrder (orderItems,shipping-address+) >

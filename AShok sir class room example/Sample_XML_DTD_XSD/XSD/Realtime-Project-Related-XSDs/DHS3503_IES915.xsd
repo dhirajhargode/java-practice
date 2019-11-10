@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Correspondence_Base_Schema.xsd" />
+
+  <xs:element name="RICorrespondence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Metadata" type="Metadata"/>
+        <xs:element name="CorrespondenceRequest" type="CorrespondenceRequest" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+	<xs:complexType name="CorrespondenceRequest">
+		<xs:sequence>
+			<xs:element name="TemplateMetadata" type="TemplateMetadataType"/>
+			<xs:element name="HeaderFooterInfo" type="HeaderFooterInfoType"/>
+			<xs:element name="RecipientInfo" type="RecipientInfoType"/>
+			<xs:element name="verificationOfStudentInformationNoticeFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="verificationOfStudentInformationNotice" type="VerificationOfStudentInformationNotice" minOccurs="0"/>
+			<xs:element name="dhs3503AdditionalDocumentationRequired" type="Dhs3503AdditionalDocumentationRequiredType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+  
+	<xs:complexType name="Dhs3503AdditionalDocumentationRequiredType">
+		<xs:sequence>
+			<xs:element name="caseWorkerCommentSection" type="CaseWorkerCommentSectionType" minOccurs="0"/>
+			<xs:element name="onlineWebsite" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailAddress" type="AddressType" minOccurs="0"/>
+			<xs:element name="mailFaxNum" type="xs:string" minOccurs="0"/>
+			<xs:element name="inPersonWebsite" type="xs:string" minOccurs="0"/>			
+			<xs:element name="inPersonPhoneNum" type="xs:string" minOccurs="0"/>
+			<xs:element name="listOfAcceptableDocs" type="ListOfAcceptableDocsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="requestedVclInformation" type="RequestedVclInformationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="RequestedVclInformationType">
+		<xs:sequence>
+			<xs:element name="programName" type="xs:string" minOccurs="0"/>
+			<xs:element name="programWiseVclInformation" type="ProgramWiseVclInformationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ProgramWiseVclInformationType">
+		<xs:sequence>
+			<xs:element name="who" type="xs:string" minOccurs="0"/>
+			<xs:element name="whatInformationIsNeeded" type="xs:string" minOccurs="0"/>			
+			<xs:element name="whenDue" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CaseWorkerCommentSectionType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="caseWorkercomments" type="xs:string" minOccurs="0"/>
+			<xs:element name="ltssAdrComments" type="LtssAdrComments" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ListOfAcceptableDocsType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="informationNeeded" type="xs:string" minOccurs="0"/>
+			<xs:element name="acceptableDocumnets" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+		<xs:complexType name="LtssAdrComments">
+		<xs:sequence>
+			<xs:element name="indvName" type="xs:string" minOccurs="0"/>
+			<xs:element name="indvComments" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+  
+</xs:schema>
+

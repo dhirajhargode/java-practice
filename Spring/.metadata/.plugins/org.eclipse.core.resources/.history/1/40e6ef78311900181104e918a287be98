@@ -1,0 +1,13 @@
+package com.nt.service;
+
+import com.nt.dao.EmployeeDAO;
+
+public class Service {
+
+	private EmployeeDAO edao;
+
+	public void setEdao(EmployeeDAO edao) {
+		this.edao = edao;
+	}
+
+}

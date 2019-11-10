@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.emp">
+		<id name="eno"></id>
+		<property name="ename"></property>
+		<property name="lname"></property>
+		<property name="salary"></property>
+	</class>
+	<query name="SELECT_ALL_DATA">
+	<![CDATA[
+	from emp
+	]]>
+	</query>
+
+	<query name="SELECT_ALL_DATA1">
+	<![CDATA[
+	from emp where salary=:sal
+	]]>
+
+
+
+
+	</query>
+</hibernate-mapping>

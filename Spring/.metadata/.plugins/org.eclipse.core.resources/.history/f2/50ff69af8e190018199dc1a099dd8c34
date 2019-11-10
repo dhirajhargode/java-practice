@@ -1,0 +1,24 @@
+package com.nt.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.nt.model.EmployeeBO;
+import com.nt.service.Service;
+import com.nt.util.CSVReader;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/nt/cfg/application-Context.xml");
+		Service service = ctx.getBean("service", Service.class);
+
+		CSVReader reader =new CSVReader();
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CacheAdvice.java&apos; to &apos;com.aa.beans.LoanCalculator.java&apos;&#x0D;&#x0A;- Original project: &apos;AOP01 Programatic LoanCalculator&apos;&#x0D;&#x0A;- Destination element: &apos;com.aa.beans.LoanCalculator.java&apos;&#x0D;&#x0A;- Original element: &apos;com.aa.test.CacheAdvice.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.aa.beans{LoanCalculator.java" element1="/src&lt;com.aa.test{CacheAdvice.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1518859711631" units="1" version="1.0"/>
+</session>

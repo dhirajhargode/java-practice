@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="parent" name="paren1,parent2,p,3" class="com.baliase.beans.Parent">
+		<property name="userId" value="101"/>
+		<property name="userName" value="Dhiraj"/>
+		<property name="email" value="hargodedhiraj@gmail.com"/>
+	</bean>
+
+	<alias name="parent" alias="p,5"/>
+	<alias name="p,5" alias="p,6"/> 
+</beans>

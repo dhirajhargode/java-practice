@@ -1,0 +1,35 @@
+package com.nt.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
+
+import com.nt.model.EmployeeBO;
+
+public class BatchInsertion implements BatchPreparedStatementSetter {
+
+	private List<EmployeeBO> listbo;
+
+	public BatchInsertion(List<EmployeeBO> listbo) {
+		this.listbo = listbo;
+	}
+
+	@Override
+	public int getBatchSize() {
+		System.out.println("getBatchSize() :: "+listbo.size());
+		return listbo.size();
+	}
+
+	@Override
+	public void setValues(PreparedStatement ps, int index) throws SQLException {
+		System.out.println("set values(-,-,..)");
+		ps.setInt(1, listbo.get(index).getEno());
+		ps.setString(2, listbo.get(index).getName());
+		ps.setString(3, listbo.get(index).getJob());
+		ps.setDouble(4, listbo.get(index).getSalary());
+
+	}
+
+}

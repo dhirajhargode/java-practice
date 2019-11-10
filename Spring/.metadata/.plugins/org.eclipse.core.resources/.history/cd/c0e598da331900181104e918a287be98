@@ -1,0 +1,34 @@
+package com.nt.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.nt.bo.EmployeeBO;
+import com.nt.dao.EmployeeDAO;
+
+public class Service {
+
+	private EmployeeDAO edao;
+
+	public void setEdao(EmployeeDAO edao) {
+		this.edao = edao;
+	}
+
+	public String registerEmployee(List<EmployeeBO> emp) {
+
+		EmployeeBO bo = new EmployeeBO();
+		bo.getEno();
+		bo.getName();
+		bo.getJob();
+		bo.getSalary();
+
+		emp.add(bo);
+		int result[] = edao.insert(emp);
+		if(result==0)
+			return "Insertion fail";
+		else
+			return "success"
+
+	}
+
+}

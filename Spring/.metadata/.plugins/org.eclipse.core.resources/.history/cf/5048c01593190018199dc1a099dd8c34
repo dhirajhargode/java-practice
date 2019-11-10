@@ -1,0 +1,16 @@
+package com.njt.dao;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+public class EmployeeDao {
+	private NamedParameterJdbcTemplate njt;
+
+	public NamedParameterJdbcTemplate getNjt() {
+		return njt;
+	}
+
+	public void setNjt(NamedParameterJdbcTemplate njt) {
+		this.njt = njt;
+	}
+
+}

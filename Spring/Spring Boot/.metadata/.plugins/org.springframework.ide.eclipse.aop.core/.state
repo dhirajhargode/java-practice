@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Boot-WebApp1"/>
+<aop-project name="Boot-App1"/>
+<aop-project name="SpringBoot-WebApp"/>
+</aop-reference-model>

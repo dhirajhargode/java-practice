@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE purchaseOrder SYSTEM "C:\NIT\Webservices\DTD\po.dtd">
+<purchaseOrder>
+	<orderItems>
+		<item>
+			<ItemCode>IC201</ItemCode>
+			<quantity>xyx</quantity>
+		</item>
+		<item>
+			<ItemCode>IC202</ItemCode>
+			<quantity>20</quantity>
+		</item>
+	</orderItems>
+	<shipping-address>
+		<addrLine1>S.RNagar</addrLine1>
+		<addrLine2>CDAC</addrLine2>
+		<city>hyd</city>
+		<state>TG</state>
+		<zip>50031</zip>
+		<country>India</country>
+	</shipping-address>
+</purchaseOrder>

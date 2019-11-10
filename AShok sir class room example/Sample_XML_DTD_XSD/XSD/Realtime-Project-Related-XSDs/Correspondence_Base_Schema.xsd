@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="AddressType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="AddressLine1"
+				minOccurs="1" />
+			<xs:element type="xs:string" name="AddressLine2"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="AddressLine3"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="AddressLine4"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="OfficeName" minOccurs="0" />
+			<xs:element type="xs:string" name="City" minOccurs="0" />
+			<xs:element type="xs:string" name="State" minOccurs="0" />
+			<xs:element type="xs:string" name="ZipCode" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element type="xs:string" name="TemplateID" minOccurs="1" />
+			<xs:element name="noticeTitle" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element type="MailCenterInfoType" name="MailCenterDetails"
+				minOccurs="1" />
+			<xs:element type="JobSheetInfoType" name="JobSheetDetails"
+				minOccurs="1" />
+			<xs:element type="xs:string" name="PrintType" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TemplateMetadataType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="NoticeTemplateID"
+				minOccurs="1" />
+			<xs:element type="xs:string" name="LanguageCd" minOccurs="0" />
+			<xs:element type="xs:string" name="caseAppNumber"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="caseAppFlag" minOccurs="0" />
+			<xs:element type="xs:string" name="printMode" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HeaderFooterInfoType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="Date" minOccurs="1" />
+			<xs:element type="xs:string" name="CaseNumber" minOccurs="0" />
+			<xs:element type="xs:string" name="AccountNumber"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="CorrespondenceNumber"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="AgencyCode" minOccurs="0" />
+			<xs:element type="xs:string" name="LogoCd" minOccurs="0" />
+			<xs:element type="xs:string" name="LogoTitle" minOccurs="0" />
+			<xs:element name="ReturnAddress" type="AddressType"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="HtcuOnline" minOccurs="0" />
+			<xs:element type="xs:string" name="HtcuByPhone" minOccurs="0" />
+			<xs:element type="AddressType" name="HtcuAddress"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="HtcuByPerson"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JobSheetInfoType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="JobId" minOccurs="0" />
+			<xs:element type="xs:string" name="JobName" minOccurs="0" />
+			<xs:element type="xs:string" name="PrintDate" minOccurs="0" />
+			<xs:element type="xs:int" name="PieceCount" minOccurs="0" />
+			<xs:element type="xs:string" name="EnvelopSize" minOccurs="0" />
+			<xs:element type="xs:string" name="ReturnEnvelop"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="BillingAccountNumber"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="MailByDate" minOccurs="0" />
+			<xs:element type="xs:string" name="SpecialInstructions"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="BillingInstructions"
+				minOccurs="0" />
+			<xs:element name="JobSheetMetadata" type="JobSheetMetadata"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MailCenterInfoType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="TemplateId" minOccurs="0" />
+			<xs:element type="xs:string" name="AgencyCode" minOccurs="0" />
+			<xs:element type="xs:string" name="LogoCd" minOccurs="0" />
+
+			<xs:element type="xs:string" name="LogoTitle" minOccurs="0" />
+			<xs:element type="xs:string" name="OwnerName" minOccurs="0" />
+			<xs:element type="xs:string" name="ExchangeWebsite"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="ExchangeFaxNumber"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="BarcodeID" minOccurs="0" />
+			<xs:element type="xs:string" name="ServiceTypeID"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="MailerID" minOccurs="0" />
+			<xs:element type="xs:string" name="SerialNumber"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="RoutingCode" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RecipientInfoType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="RecipientName"
+				minOccurs="0" />
+			<xs:element type="AddressType" name="RecipientAddress"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="AuthRepresentativeName"
+				minOccurs="0" />
+			<xs:element type="AddressType" name="AuthRepresentativeAddress"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IndividualNameType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="IndividualFirstName"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="IndividualMiddleName"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="IndividualLastName"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IndividualDetailsType">
+		<xs:sequence>
+			<xs:element name="IndividualName" type="IndividualNameType"
+				minOccurs="0" />
+			<xs:element name="DateOfBirth" type="xs:string" minOccurs="0" />
+			<xs:element name="SSN" type="xs:string" minOccurs="0" />
+			<xs:element name="ProgramName" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="DenialReason" type="xs:string"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DCIndvInfo">
+		<xs:sequence>
+			<xs:element name="IndividualName" type="IndividualNameType" />
+			<xs:element name="VerificiationItem" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DueDate" type="xs:string" minOccurs="0" />
+			<xs:element name="AcceptableProof" type="xs:string"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocVerificationType">
+		<xs:sequence>
+			<xs:element name="IndividualName" type="IndividualNameType" />
+			<xs:element name="VerificiationItem" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DueDate" type="xs:string" minOccurs="0" />
+			<xs:element name="AcceptableProof" type="xs:string"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MedicaidSummaryOfCoverageType">
+		<xs:sequence>
+			<xs:element name="IndividualDetails" type="IndividualDetailsType"
+				minOccurs="0" />
+			<xs:element name="MedicaidElgibilityEffectiveDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="MedicaidRecertificationDate" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QualityControlType">
+		<xs:sequence>
+			<xs:element name="IndividualName" type="IndividualDetailsType"
+				minOccurs="0" />
+			<xs:element name="ReviewerName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="VeteranName" type="xs:string" minOccurs="0" />
+			<xs:element name="VAClaimNumber" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="AgencyRepresentative" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="VerificationDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="QCAgencyReturnAddress" type="AddressType"
+				minOccurs="0" />
+			<xs:element name="AppointmentDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DatesofServiceFrom" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DatesofServiceTo" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="ReviewNumber" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BenefitClaimType">
+		<xs:sequence>
+			<xs:element name="ClaimNumber" type="xs:string" minOccurs="0" />
+			<xs:element name="TotalOverIssuance" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="OverIssuanceBeginDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="OverIssuanceEndDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="InstallmentAmount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="HearingAppealDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DHSFraudUnitAddress" type="AddressType"
+				minOccurs="0" />
+			<xs:element name="OverIssuancePeriod" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="ClaimAmount" type="xs:string" minOccurs="0" />
+			<xs:element name="DueDateToRepayfullamount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="OverissuanceAmount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DueDate" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RiteShareRiteCareType">
+		<xs:sequence>
+			<xs:element name="HealthPlanDetails" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="HealthPlan" type="xs:string" minOccurs="0" />
+			<xs:element name="EmployerName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EmployeeName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EffectiveDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="SSN" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="QHPSummaryOfCoverageType">
+		<xs:sequence>
+			<xs:element name="IndividualDetails" type="IndividualDetailsType"
+				minOccurs="0" />
+			<xs:element name="CarrierName" type="xs:string" minOccurs="0" />
+			<xs:element name="CarrierPlan" type="xs:string" minOccurs="0" />
+			<xs:element name="CoverageEffectiveDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="CoverageEndDate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="IsDentalOnlySw" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AppealInfoType">
+		<xs:sequence>
+			<xs:element name="AppealNumber" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="DateFiled" type="xs:string" minOccurs="0" />
+			<xs:element name="AppealDecision" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="AppealReason" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EmployeeInfoType">
+		<xs:sequence>
+			<xs:element name="EmployeeFirstName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EmployeeLastName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EmployeeMailingAddress1" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EmployeeMailingAddress2" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EmployeeCity" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="EmployeeState" type="xs:string" />
+			<xs:element name="EmployeeZipCode" type="xs:string" />
+			<xs:element name="EmployeeAptNum" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="EmployerAndAdminInfoType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="EmployerFirstName"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="EmployerLastName"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="AdminFirstName"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="AdminLastName"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CompanyInfoType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="EIN" minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyName" minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyAddressLine1"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyAddressLine2"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyCity" minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyState"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyZipCode"
+				minOccurs="0" />
+			<xs:element type="xs:string" name="CompanyAptNum"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="JobSheetMetadata">
+		<xs:sequence>
+			<xs:element name="PrintInstruction" type="xs:string"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="InitialAssetAssessmentandAssetRecordType">
+		<xs:sequence>
+			<xs:element name="initialassetassessmentdate" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="couplescountableassetsforinitialassetassessment"
+				type="xs:string" minOccurs="0" />
+			<xs:element name="one-halfoflineB" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="patientscountableassets" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="spousescountableassets" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="totallineDlineE" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="courtorderedtransferamount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="currenttotalfromlineF" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="protectedspousalamount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="protectedspousalamountI" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="patientscountableamount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="patientscountableamountNext" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="communitySpouseResourceAllowance" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="spousesassetamountfromlineE" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="communitySpouseResourceAllowanceNext"
+				type="xs:string" minOccurs="0" />
+			<xs:element name="patientAsset" type="AssetType"
+				maxOccurs="unbounded" />
+			<xs:element name="spouseAssest" type="AssetType"
+				maxOccurs="unbounded" />
+
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AssetType">
+		<xs:sequence>
+			<xs:element name="assetType" type="xs:string" minOccurs="0" />
+			<xs:element name="value" type="xs:string" minOccurs="0" />
+
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="AssetTransferNoticeType">
+		<xs:sequence>
+			<xs:element name="iaaAssestLimit" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="protectedSpousalAmount" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="spousesAssets" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="communitySpouseResourceAllowance" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="changeReportingDays" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="appealDeadline" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PhysicianExaminationReportType">
+		<xs:sequence>
+			<xs:element name="socialSecurityNumber" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="dateofBirth" type="xs:string" minOccurs="0" />
+			<xs:element name="patientName" type="xs:string" minOccurs="0" />
+			<xs:element name="gender" type="xs:string" minOccurs="0" />
+			<xs:element name="date" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="RS30EmploiyerVerificationOfHealthInsurance">
+		<xs:sequence>
+			<xs:element name="employerName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="employeeName" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="employeSSN" type="xs:string" minOccurs="0" />
+			<xs:element name="companyName" type="xs:string" minOccurs="0" />
+			<xs:element name="effectiveDt" type="xs:string" minOccurs="0" />
+			<xs:element name="planDetailsRow" type="RS30PlanDetailsType"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="faxNumber" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RS30PlanDetailsType">
+		<xs:sequence>
+			<xs:element name="planName" type="IndividualNameType" />
+			<xs:element name="tier" type="xs:string" minOccurs="0" />
+			<xs:element name="employeeContributiion" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="AcceptableProof" type="xs:string"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+
+
+	</xs:complexType>
+
+	<xs:complexType name="EmployerHealthInsuranceFormType">
+		<xs:sequence>
+			<xs:element name="employerName" type="xs:string" />
+			<xs:element name="riteShareEmployerAddress" type="AddressType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ChangeReport">
+		<xs:sequence>
+			<xs:element name="changeReportingDays" type="xs:string"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RS50Instructions">
+		<xs:sequence>
+			<xs:element name="employerContactUnitAddr" type="AddressType"
+				minOccurs="0" />
+			<xs:element name="employerContactUnitFax" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="directDepositAddr" type="AddressType"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CORGEN01RightsAndRisponsibilitiesType">
+		<xs:sequence>
+			<xs:element name="iapChangeReportingReq" type="IAPChangeReportingReqType" minOccurs="0"/>
+			<xs:element name="noIAPChangeReportingReq" type="NoIAPChangeReportingReqType" minOccurs="0"/>
+			<xs:element name="exemptionChangeReportingReq" type="ExemptionChangeReportingReqType" minOccurs="0"/>
+			<xs:element name="aptcDisplayFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="csrDisplayFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="regulatoryBasisDisplayFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="exemptionRegulatoryBasisDisplayFlag" type="xs:string" minOccurs="0"/>
+			<xs:element name="qhpTerminationByYou" type="QHPTerminationByYouType" minOccurs="0"/>
+			<xs:element name="medicaidTerminationByYou" type="MedicaidTerminationByYouType" minOccurs="0"/>
+			<xs:element name="qhpTerminationByCarrierByTheExchange" type="QHPTerminationByCarrierByTheExchangeType" minOccurs="0"/>
+			<xs:element name="medicaidTerminationByState" type="MedicaidTerminationByStateType" minOccurs="0"/>
+			<xs:element name="qhpAnnualRenewal" type="QHPAnnualRenewalType" minOccurs="0"/>
+			<xs:element name="appealRightsAndDeadlines" type="AppealRightsAndDeadlinesType" minOccurs="0"/>
+			<xs:element name="exchangeContactCenterPhoneNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="exchangeWebsite" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="IAPChangeReportingReqType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="iapChangeReportingDays" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="NoIAPChangeReportingReqType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="noIAPChangeReportingDays" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ExemptionChangeReportingReqType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="exemptionChangeReportingDays" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="eligibleMemberRowType">
+		<xs:sequence>
+			<xs:element name="memberName" type="xs:string" minOccurs="0" />
+			<xs:element name="ssn" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+			
+	<xs:complexType name="QHPTerminationByYouType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="qhpEnrolledMemberRow" type="eligibleMemberRowType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="MedicaidTerminationByYouType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="medicalCoverageMemberRow" type="eligibleMemberRowType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="QHPTerminationByCarrierByTheExchangeType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="privateQHPEnrolledMemberRow" type="eligibleMemberRowType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="MedicaidTerminationByStateType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="activeMedicaidCoverageMemberRow" type="eligibleMemberRowType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="QHPAnnualRenewalType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="privateQHPEnrolledMemberRow" type="eligibleMemberRowType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="AppealRightsAndDeadlinesType">
+		<xs:sequence>
+			<xs:element name="displayFlag" type="xs:string" minOccurs="0" />
+			<xs:element name="magiHearingReqDays" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="VerificationOfStudentInformationNotice">
+		  <xs:sequence>
+			 <xs:element name="studentName" type="xs:string" minOccurs="0"/>
+			 <xs:element name="studentBirthDate" type="xs:string" minOccurs="0"/>
+			 <xs:element name="returnDate" type="xs:string" minOccurs="0"/>
+		  </xs:sequence>
+     </xs:complexType>
+	
+
+</xs:schema>

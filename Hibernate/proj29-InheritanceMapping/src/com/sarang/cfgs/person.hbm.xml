@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.person">
+		<id name="pid"></id>
+		<discriminator column="person_type" type="string"
+			length="30"></discriminator>
+		<property name="name" type="string" length="10"></property>
+		<property name="compony" type="string" length="20"></property>
+		<subclass name="com.sarang.domain.Employee"
+			discriminator-value="emp">
+			<property name="salary" type="string" length="10"></property>
+			<property name="department" type="string" length="10">
+			</property>
+		</subclass>
+		<subclass name="com.sarang.domain.Customer"
+			discriminator-value="cust">
+			<property name="address" type="string" length="10"></property>
+		</subclass>
+
+
+	</class>
+</hibernate-mapping>

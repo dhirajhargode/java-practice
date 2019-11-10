@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="pFactory" class="com.ifm.beans.PrinterFactory" />
+	<bean id="p" class="com.ifm.beans.Printer"
+	 			 factory-bean="pFactory"
+				 factory-method="createPrinter">
+		<property name="id" value="101" />
+		<property name="name" value="Sony" />
+	</bean>
+
+	<bean id="atm" class="com.ifm.beans.ATM">
+		<property name="printer" ref="p" />
+	</bean>
+
+</beans>

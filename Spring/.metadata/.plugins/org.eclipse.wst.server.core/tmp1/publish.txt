@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Fri Mar 02 15:41:39 IST 2018
+org.eclipse.jst.jee.server\:/binary\:E\:\\JAVA\\SPRING-ASHOK\\MVC\ module\\MVC04\ SimpleUrlHandlerMapper\\WebContent\\WEB-INF\\lib\\spring-web-4.2.0.RELEASE-sources.jar=F\:\\Software\\Spring\\sts-bundle\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\MVC04 SimpleUrlHandlerMapper\\WEB-INF\\lib\\spring-web-4.2.0.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:MVC04\ SimpleUrlHandlerMapper=F\:\\Software\\Spring\\sts-bundle\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\MVC04 SimpleUrlHandlerMapper
+org.eclipse.jst.jee.server\:/binary\:E\:\\JAVA\\SPRING-ASHOK\\MVC\ module\\MVC04\ SimpleUrlHandlerMapper\\WebContent\\WEB-INF\\lib\\spring-web-4.2.0.RELEASE.jar=F\:\\Software\\Spring\\sts-bundle\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\MVC04 SimpleUrlHandlerMapper\\WEB-INF\\lib\\spring-web-4.2.0.RELEASE.jar

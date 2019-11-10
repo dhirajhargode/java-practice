@@ -1,0 +1,27 @@
+package com.nt.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
+
+import com.nt.bo.EmployeeBO;
+
+public class BatchInsertion implements BatchPreparedStatementSetter {
+
+	private List<EmployeeBO> listbo;
+	
+	@Override
+	public int getBatchSize() {
+		System.out.println("getBatchSize() ::");
+		return listbo.size();
+	}
+
+	@Override
+	public void setValues(PreparedStatement arg0, int arg1) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

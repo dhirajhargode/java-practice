@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="robot" class="com.baw.beans.Robot" autowire="constructor">
+		<property name="robotId" value="1001" />
+		<property name="robotType" value="milatry robot" />
+		<constructor-arg name="robotType" ref="chip1"/>
+		<constructor-arg name="robotType" ref="c1"/>
+	</bean>
+	
+	<bean id="chip1" class="com.baw.beans.Chip">
+		<property name="chipId" value="5001" />
+		<property name="chipType" value="chip 32 bit" />
+	</bean>
+	<bean id="c1" class="com.baw.beans.Chip1" autowire-candidate="false">
+		<property name="chipId" value="2001" />
+		<property name="chipType" value="Chip1-64-bit" />
+	</bean>
+
+	<!-- <bean id="chip2" class="com.baw.beans.Chip" >
+		<property name="chipId" value="5002" />
+		<property name="chipType" value="chip 64 bit" />
+	</bean>
+ 
+	
+
+	 <bean id="c2" class="com.baw.beans.Chip1">
+		<property name="chipId" value="2002" />
+		<property name="chipType" value="Chip1-32-bit" />
+	</bean> -->
+
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="cec"
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.cpe.beans.Addition" value="com.cpe.beans.AdditionPropertyEditor" />
+			</map>
+		</property>
+	</bean>
+	<bean id="calculator" class="com.cpe.beans.Calculator">
+		<property name="addition" value="10,20" />
+	</bean>
+
+
+</beans>

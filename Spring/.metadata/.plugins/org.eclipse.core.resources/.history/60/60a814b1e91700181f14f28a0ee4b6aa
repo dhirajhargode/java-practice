@@ -1,0 +1,65 @@
+
+package com.dc.beans;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCallback;
+
+public class AppDao {
+
+	private JdbcTemplate jdbctemplete;
+
+	private static final String Insert_Query = "INSERT INTO BOOK_STORE(BOOK_ID,AUTHOR_NAME,BOOK_NAME,PRICE,ISBN) VALUES(?,?,?,?,?)";
+	private static final String Find_By_ID = "SELECT * FROM BOOK_STORE WHERE BOOK_ID=?";
+	private static final String Find_By_Price = "SELECT * FROM BOOK_STORE WHERE PRICE>=?";
+
+	public void insertBook(int bid, String aname, String bname, Double price, String isbn) {
+
+		int no = jdbctemplete.update(Insert_Query, bid, aname, bname, price, isbn);
+		if (no > 0)
+			System.out.println("sucessfully inserted....");
+		else
+			System.out.println("failed....");
+
+	}
+
+	/*public void insertBookWithPstm(int bid, String aname, String bname, Double price, String isbn) {
+		
+	PreparedStatementCallback<Book> pstmcall=new PreparedStatementCallback<Book>()	{
+	
+		public Book doInPreparedStatement(PreparedStatement pstm) throws SQLException, DataAccessException {
+			pstm.setInt(1,bid);
+			pstm.setString(2, aname);
+			pstm.setString(3, bname);
+			pstm.setDouble(4, price);
+			pstm.setString(5, isbn);
+			return pstm.execute();
+		}
+	};
+		jdbctemplete.execute(Insert_Query,pstmcall);
+	}*/
+		
+
+
+	public Book findBookId(int bid) {
+		return jdbctemplete.queryForObject(Find_By_ID, new Object[] { bid }, new BookMapper());
+	}
+	
+	
+	public List<Book> findBookByPrice(double price){
+		return jdbctemplete.query(Find_By_Price,new Object[] {price},new BookMapper());
+		
+	}
+	
+	
+	
+
+	public void setJdbctemplete(JdbcTemplate jdbctemplete) {
+		this.jdbctemplete = jdbctemplete;
+	}
+
+}

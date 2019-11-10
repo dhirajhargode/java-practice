@@ -1,0 +1,8 @@
+package com.bs.dao;
+
+
+import org.springframework.jdbc.object.MappingSqlQuery;
+
+public class SelectEmployee extends MappingSqlQuery<EmployeeBO>{
+
+}

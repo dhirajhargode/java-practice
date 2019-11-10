@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.Person">
+		<id name="pid">
+		</id>
+		<property name="pname"></property>
+		<component name="pjob" class="com.sarang.domain.JobType">
+			<property name="job"></property>
+			<property name="department"></property>
+		</component>
+	</class>
+</hibernate-mapping>

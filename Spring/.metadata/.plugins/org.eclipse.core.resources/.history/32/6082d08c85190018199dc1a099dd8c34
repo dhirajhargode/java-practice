@@ -1,0 +1,44 @@
+package com.jdbc.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.bo.model.Employee;
+import com.jdbc.mapper.EmployeeMapper;
+
+public class DBOperationDAO {
+
+	private JdbcTemplate jt;
+
+	private static final String INSERT_QRY = "insert into employee(EmpNo,Name,Job,Salary) values(?,?,?,?)";
+	private static final String GET_EMP_SALARY = "select Salary from employee where EmpNo=?";
+	private static final String GET_ALL_EMP_DETAIL = "select * from employee";
+	private static final String GET_EMP_DETAIL = "select * from employee where EmpNO=?";
+
+	public int insert(int no, String name, String job, double salary) {
+		int insert = jt.update(INSERT_QRY, no, name, job, salary);
+		return insert;
+	}
+
+	public Employee getSalary(int no) {
+		Employee emp = jt.queryForObject(GET_EMP_SALARY, new Object[] { no }, new EmployeeMapper());
+		return emp;
+	}
+
+	public Map<String, Object> listEmpDetail(int no) {
+		Map<String, Object> map = jt.queryForMap(GET_EMP_DETAIL, no);
+		return map;
+	}
+
+	public List<Map<String, Object>> listAllEmpDetail() {
+		List<Map<String, Object>> list = jt.queryForList(GET_ALL_EMP_DETAIL);
+		return list;
+	}
+
+	public void setJt(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+
+}

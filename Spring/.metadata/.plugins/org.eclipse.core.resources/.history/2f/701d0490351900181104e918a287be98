@@ -1,0 +1,100 @@
+package com.dc.test;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.dc.dao.AppDao;
+import com.dc.model.Book;
+
+public class TestDMLQuery {
+
+	public static void main(String[] args) {
+
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/dc/cfg/Application-Context.xml");
+		AppDao dao = ctx.getBean("dao", AppDao.class);
+		
+		/* insert record by using direct calling method Update() */
+		System.out.println("===========================");
+		System.out.println("  1. Simple Insert Data  ");
+		System.out.println("===========================");
+		//dao.insertBook(102, "Rod Johnson", "Spring JDBC", 400.00, "ISBN002");
+
+		/* insert record by using preparedStatement calling method execute() */
+		System.out.println("===========================");
+		System.out.println("  2. insert using preparedStatement");
+		System.out.println("===========================");
+
+		dao.insertBookWithPstm(105, "Rod Johnson", "Hibernate", 600.00, "ISBN005");
+		
+
+		/* retrive one data by using RowMapper() */
+
+		System.out.println("===========================");
+		System.out.println("  3. Retrive One data by Id  ");
+		System.out.println("===========================");
+		System.out.println(dao.findBookId(101));
+
+		/* retrive multiple data */
+
+		System.out.println("===========================");
+		System.out.println("  4. Retrive multiple data by (>) price ");
+		System.out.println("===========================");
+
+		List<Book> books = dao.findBookByPrice(100.00);
+		if (!books.isEmpty()) {
+			for (Book book : books) {
+				System.out.println(book);
+			}
+		}
+
+		System.out.println("===========================");
+		System.out.println("  5. List by using Query   ");
+		System.out.println("===========================");
+
+		System.out.println(dao.findAllBook());
+
+		/* retrive one record data in key and value format */
+
+		System.out.println("===========================");
+		System.out.println("  6. MAP   ");
+		System.out.println("===========================");
+		Map<String, Object> map = dao.findByUsingMap(103);
+		if (!map.isEmpty()) {
+			Set<String> keys = map.keySet();
+			Iterator keyitr = keys.iterator();
+			while (keyitr.hasNext()) {
+				String key = (String) keyitr.next();
+				Object value = map.get(key);
+				System.out.println(key + "=" + value);
+			}
+		}
+
+		/* retrive multiple record data in key and value format */
+
+		System.out.println("===========================");
+		System.out.println("  7. List Map   ");
+		System.out.println("===========================");
+
+		List<Map<String, Object>> list = dao.findByUsingListMap();
+		if (!list.isEmpty()) {
+			for (Map<String, Object> m : list) {
+				Set<String> keys = m.keySet();
+				Iterator keyitr = keys.iterator();
+				while (keyitr.hasNext()) {
+					String key = (String) keyitr.next();
+					Object value = m.get(key);
+					System.out.println(key + "==" + value);
+				}
+				System.out.println("**************************");
+			}
+
+		}
+
+	}
+
+}

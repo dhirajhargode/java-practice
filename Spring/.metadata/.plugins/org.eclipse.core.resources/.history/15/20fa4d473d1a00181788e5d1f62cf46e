@@ -1,0 +1,33 @@
+package com.bs.dao;
+
+import java.util.List;
+
+import javax.activation.DataSource;
+
+import com.bs.model.EmployeeBO;
+
+public class EmlpoyeeDAO {
+
+	private DataSource ds;
+
+
+	public List<EmployeeBO> findByName(String ename){
+		
+		
+		
+		return null;
+		
+	}
+	
+	
+	
+	
+	public DataSource getDs() {
+		return ds;
+	}
+
+	public void setDs(DataSource ds) {
+		this.ds = ds;
+	}
+
+}

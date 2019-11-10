@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.sarang.domain.emp">
+		<id name="eno"></id>
+		<property name="ename"></property>
+		<property name="lname"></property>
+		<property name="salary"></property>
+	</class>
+
+
+</hibernate-mapping>

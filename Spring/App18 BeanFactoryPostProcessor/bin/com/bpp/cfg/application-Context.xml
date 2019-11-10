@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ppc" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreResourceNotFound" value="true"/>
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>  
+		<property name="locations">
+			<list>
+				<value>com/bpp/commons/DB.properties</value>
+				<value>com/bpp/commons/DB2.properties</value>
+			</list>
+		</property>
+	<!-- 	<property name="trimValues" value="true">  for this method setter req.  -->
+		
+	</bean>
+	
+	<bean id="conProvider" class="com.bpp.beans.ConnectionProvider">
+		<!-- <constructor-arg name="url" value="${url}"/>
+		<constructor-arg name="driver" value="${driver}"/>
+		<constructor-arg name="uname" value="${uname}"/>
+		<constructor-arg name="psw" value="${psw}"/> -->
+		
+		<property name="url" value="${url}"/>
+		<property name="driver" value="${driver}"/>
+		<property name="uname" value="${uname}"/>
+		<property name="psw" value="${psw}"/>
+	</bean>
+</beans>

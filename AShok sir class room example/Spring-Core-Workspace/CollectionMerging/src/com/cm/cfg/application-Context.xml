@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="triageCall" class="com.cm.beans.Meeting">
+		<property name="meetingType" value="Triage Meeting" />
+		<property name="participants">
+			<set value-type="java.lang.String">
+				<value>Johnson</value>
+				<value>Smith</value>
+				<value>Ramesh</value>
+				<value>Suresh</value>
+			</set>
+		</property>
+	</bean>
+	<bean id="standUpcall" class="com.cm.beans.Meeting" parent="triageCall">
+		<property name="meetingType" value="Standup Meeting" />
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Sita</value>
+				<value>Gita</value>
+				<value>Ramesh</value>
+				<value>Suresh</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean id="weeklyMeeting" class="com.cm.beans.Meeting" parent="standUpcall">
+		<property name="meetingType" value="Weekly Status Meeting" />
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Mohan</value>
+				<value>Aushtosh</value>
+			</set>
+		</property>
+	</bean>
+</beans>

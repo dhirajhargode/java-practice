@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE db-config SYSTEM "C:\NIT\Webservices\DTD\DBConfig.dtd">
+<db-config>
+	<db-host>localhost</db-host>
+	<db-name>XE</db-name>
+	<db-user>System</db-user>
+	<db-password>Ashok</db-password>
+</db-config>

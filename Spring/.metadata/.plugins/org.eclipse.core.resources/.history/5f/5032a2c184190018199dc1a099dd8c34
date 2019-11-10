@@ -1,0 +1,42 @@
+package com.bo.model;
+
+import com.jdbc.dao.EmployeeMapper;
+
+public class Employee {
+
+	private int no;
+	private String name;
+	private String job;
+	private Double salary;
+	
+	private EmployeeMapper empMap;
+	
+	
+
+	public void setEmpMap(EmployeeMapper empMap) {
+		this.empMap = empMap;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [no=" + no + ", name=" + name + ", job=" + job + ", salary=" + salary + "]";
+	}
+
+	
+}

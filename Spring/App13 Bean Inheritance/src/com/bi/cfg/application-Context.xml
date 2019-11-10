@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="baseMobile" class="com.bi.beans.Moblie" abstract="true">
+		<property name="color" value="Black" />
+		<property name="mobileName" value="IPhone-6s" />
+		<property name="price" value="30000.00" />
+	</bean>
+
+	<bean id="mobile1" class="com.bi.beans.Moblie" parent="baseMobile">
+		<property name="mobileId" value="101" />
+		<property name="imeiNum" value="7878787878" />
+	</bean>
+	<bean id="mobile2" class="com.bi.beans.Moblie" parent="baseMobile">
+		<property name="mobileId" value="102" />
+		<property name="imeiNum" value="565655665" />
+	</bean>
+
+	<bean id="mobile3" class="com.bi.beans.Moblie" parent="baseMobile">
+		<property name="mobileId" value="103" />
+		<property name="imeiNum" value="565655664" />
+	</bean>
+
+	
+</beans>

@@ -1,0 +1,48 @@
+package com.dc.beans;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCallback;
+
+public class AppDao {
+
+	private JdbcTemplate jdbctemplete;
+
+	private static final String Insert_Quert = "INSERT INTO BOOK_STORE(BOOK_ID,AUTHOR_NAME,BOOK_NAME,PRICE,ISBN) VALUES(?,?,?,?,?)";
+	private static final String Select_Quert = "SELECT * FROM BOOK_STORE WHERE BOOK_ID=?";
+
+	public void insertBook(int bid, String aname, String bname, Double price, String isbn) {
+
+		int no = jdbctemplete.update(Insert_Quert, bid, aname, bname, price, isbn);
+		if (no > 0)
+			System.out.println("sucessfully inserted....");
+		else
+			System.out.println("failed....");
+
+	}
+
+	/*PreparedStatementCallback<boolean>pstmcall=new PreparedStatementCallback<boolean>()	{
+		public boolean doInPreparedStatement(PreparedStatement pstm,int bid, String aname, String bname, Double price, String isbn) throws SQLException, DataAccessException {
+			pstm.setInt(1,bid);
+			pstm.setString(2, aname);
+			pstm.setString(3, bname);
+			pstm.setDouble(4, price);
+			pstm.setString(5, isbn);
+			return pstm.execute();
+		}
+	};*/
+
+	public Book findBookId(int bid) {
+		return (Book) jdbctemplete.queryForObject(Select_Quert, new Object[] { bid }, new BookMapper());
+		 
+
+	}
+
+	public void setJdbctemplete(JdbcTemplate jdbctemplete) {
+		this.jdbctemplete = jdbctemplete;
+	}
+
+}
