@@ -1,0 +1,20 @@
+package com.practice.dhiraj;
+
+import java.io.File;
+
+public class App 
+{
+	
+
+	
+    public static void main( String[] args )
+    {
+    	ClassLoader classLoader = new ReadJsonFile().getClass().getClassLoader();
+    	String fileName = "com/practice/dhiraj/report.json";
+    	File file = new File(classLoader.getResource(fileName).getFile());
+    	
+
+    	
+    	
+    }
+}

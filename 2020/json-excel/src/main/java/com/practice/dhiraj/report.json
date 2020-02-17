@@ -1,0 +1,33 @@
+{
+	"people": {
+		"_class": "model.view.",
+		"user": [{
+			"lastChange": 151565626156,
+			"project":{
+				"color": "red",
+				"displayName": "project1",
+				"name": "project1",
+				"_class": "project1",
+				"url": "project1url"
+			},
+			"user":{
+				"absoluteUrl": "prje1",
+				"fullName": "abc"
+			}
+		},{
+			"lastChange": 123456789,
+			"project":{
+				"color": "green",
+				"displayName": "project2",
+				"name": "project2",
+				"_class": "project2",
+				"url": "project2url"
+			},
+			"user":{
+				"absoluteUrl": "prje2",
+				"fullName": "xyz"
+			}
+		}
+		]
+	}
+}

@@ -1,0 +1,73 @@
+package com.practice.dhiraj;
+
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		 //Blank workbook
+        XSSFWorkbook workbook = new XSSFWorkbook(); 
+         
+        //Create a blank sheet
+        XSSFSheet sheet = workbook.createSheet("Jenkins Report");
+		
+		String jsonFile = "{\r\n" + "	\"people\": {\r\n" + "		\"_class\": \"model.view.\",\r\n"
+				+ "		\"user\": [{\r\n" + "			\"lastChange\": 151565626156,\r\n"
+				+ "			\"project\":{\r\n" + "				\"color\": \"red\",\r\n"
+				+ "				\"displayName\": \"project1\",\r\n" + "				\"name\": \"project1\",\r\n"
+				+ "				\"_class\": \"project1\",\r\n" + "				\"url\": \"project1url\"\r\n"
+				+ "			},\r\n" + "			\"user\":{\r\n" + "				\"absoluteUrl\": \"prje1\",\r\n"
+				+ "				\"fillName\": \"abc\"\r\n" + "			}\r\n" + "		},{\r\n"
+				+ "			\"lastChange\": 123456789,\r\n" + "			\"project\":{\r\n"
+				+ "				\"color\": \"green\",\r\n" + "				\"displayName\": \"project2\",\r\n"
+				+ "				\"name\": \"project2\",\r\n" + "				\"_class\": \"project2\",\r\n"
+				+ "				\"url\": \"project2url\"\r\n" + "			},\r\n" + "			\"user\":{\r\n"
+				+ "				\"absoluteUrl\": \"prje2\",\r\n" + "				\"fillName\": \"xyz\"\r\n"
+				+ "			}\r\n" + "		}\r\n" + "		]\r\n" + "	}\r\n" + "}";
+
+		JSONParser parser = new JSONParser();
+		
+		Map<Integer, Object[]> data = new TreeMap<Integer, Object[]>();
+		data.put(1, new Object[] {"lastChange", "color", "displayName", "Name","url","absoluteUrl", "fullName"});
+		
+		try {
+
+			Object obj = parser.parse(jsonFile);
+			JSONObject jsonObj = (JSONObject) obj;
+			JSONObject people = (JSONObject) jsonObj.get("people");
+			JSONArray users = (JSONArray) people.get("user");
+
+			for (Object user : users) {
+				JSONObject jsonUser = (JSONObject) user;
+				Long lastChange = (Long) jsonUser.get("lastChange");
+				System.out.println("lastChange :" + lastChange);
+			//	JSONObject projectObj = (JSONObject) jsonUser.get("project");
+				JSONArray projectObj = (JSONArray) jsonUser.get("project");
+				for (Object project : projectObj) {
+					System.out.println("project :" + project.toJSONString());
+					//JSONObject jsonProject = (JSONObject) project;
+					
+				}
+				
+				JSONObject userObj = (JSONObject) jsonUser.get("user");
+				System.out.println("user :" + userObj.toJSONString());
+				
+				 data.put("2", new Object[] {1, "Amit", "Shukla"});
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

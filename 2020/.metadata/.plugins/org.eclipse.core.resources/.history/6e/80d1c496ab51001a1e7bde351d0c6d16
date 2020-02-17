@@ -1,0 +1,57 @@
+package com.practice.dhiraj;
+
+import java.io.FileReader;
+import java.util.ArrayList;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		String jsonFile = "{\r\n" + "	\"people\": {\r\n" + "		\"_class\": \"model.view.\",\r\n"
+				+ "		\"user\": [{\r\n" + "			\"lastChange\": 151565626156,\r\n"
+				+ "			\"project\":{\r\n" + "				\"color\": \"red\",\r\n"
+				+ "				\"displayName\": \"project1\",\r\n" + "				\"name\": \"project1\",\r\n"
+				+ "				\"_class\": \"project1\",\r\n" + "				\"url\": \"project1url\"\r\n"
+				+ "			},\r\n" + "			\"user\":{\r\n" + "				\"absoluteUrl\": \"prje1\",\r\n"
+				+ "				\"fillName\": \"abc\"\r\n" + "			}\r\n" + "		},{\r\n"
+				+ "			\"lastChange\": 123456789,\r\n" + "			\"project\":{\r\n"
+				+ "				\"color\": \"green\",\r\n" + "				\"displayName\": \"project2\",\r\n"
+				+ "				\"name\": \"project2\",\r\n" + "				\"_class\": \"project2\",\r\n"
+				+ "				\"url\": \"project2url\"\r\n" + "			},\r\n" + "			\"user\":{\r\n"
+				+ "				\"absoluteUrl\": \"prje2\",\r\n" + "				\"fillName\": \"xyz\"\r\n"
+				+ "			}\r\n" + "		}\r\n" + "		]\r\n" + "	}\r\n" + "}";
+
+		JSONParser parser = new JSONParser();
+		try {
+
+			Object obj = parser.parse(jsonFile);
+			JSONObject jsonObj = (JSONObject) obj;
+			JSONObject people = (JSONObject) jsonObj.get("people");
+			System.out.println("people :" + people.toJSONString());
+			System.out.println("=================");
+
+			String _class = (String) people.get("_class");
+			System.out.println("_class :" + _class);
+
+			JSONArray users = (JSONArray) people.get("user");
+			// System.out.println("user :" + user);
+
+			for (Object user : users) {
+				 System.out.println(user);
+				JSONObject jsonUser = (JSONObject) user;
+				String lastChange = (String) people.get("lastChange");
+				System.out.println("lastChange :" + lastChange);
+				JSONObject userObj = (JSONObject) jsonUser.get("project");
+				System.out.println("project :" + userObj.toJSONString());
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,43 @@
+package com.practice.dhiraj;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		String jsonFile = "{\r\n" + 
+				"	\"people\": {\r\n" + 
+				"		\"_class\": \"model.view.\",\r\n" + 
+				"		\"user\": [{\r\n" + 
+				"			\"lastChange\": 151565626156,\r\n" + 
+				"			\"project\":{\r\n" + 
+				"				\"color\": \"red\",\r\n" + 
+				"				\"displayName\": \"project1\",\r\n" + 
+				"				\"name\": \"project1\",\r\n" + 
+				"				\"_class\": \"project1\",\r\n" + 
+				"				\"url\": \"project1url\"\r\n" + 
+				"			},\r\n" + 
+				"			\"user\":{\r\n" + 
+				"				\"absoluteUrl\": \"prje1\",\r\n" + 
+				"				\"fillName\": \"abc\"\r\n" + 
+				"			}\r\n" + 
+				"		},{\r\n" + 
+				"			\"lastChange\": 123456789,\r\n" + 
+				"			\"project\":{\r\n" + 
+				"				\"color\": \"green\",\r\n" + 
+				"				\"displayName\": \"project2\",\r\n" + 
+				"				\"name\": \"project2\",\r\n" + 
+				"				\"_class\": \"project2\",\r\n" + 
+				"				\"url\": \"project2url\"\r\n" + 
+				"			},\r\n" + 
+				"			\"user\":{\r\n" + 
+				"				\"absoluteUrl\": \"prje2\",\r\n" + 
+				"				\"fillName\": \"xyz\"\r\n" + 
+				"			}\r\n" + 
+				"		}\r\n" + 
+				"		]\r\n" + 
+				"	}\r\n" + 
+				"}";
+		
+		
+	}
+}
